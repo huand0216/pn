@@ -1,0 +1,131 @@
+{
+  "uid" : "6c60a17a8d130d4c",
+  "name" : "test_inquiry[data6]",
+  "fullName" : "tests.test_1_inquiry.Test_inquiry#test_inquiry",
+  "historyId" : "95cdc206d53d000ebbd7ff04baf8aff5",
+  "time" : {
+    "start" : 1624420141287,
+    "stop" : 1624420141362,
+    "duration" : 75
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1624420130622,
+      "stop" : 1624420130623,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1624420130623,
+      "stop" : 1624420131482,
+      "duration" : 859
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1624420131483,
+      "stop" : 1624420131483,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1624420141286,
+      "stop" : 1624420141286,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1624420130623,
+      "stop" : 1624420130623,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1_inquiry"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_inquiry"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "3575-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_1_inquiry"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'caseA1', '描述': '获取用户信息', '请求方法': 'GET', '请求地址': 'http://test.daishupei.com/api/auth/userInfo', '请求参数': '', '预期结果': '\"errCode\":0'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6c60a17a8d130d4c.json",
+  "parameterValues" : [ "{'caseID': 'caseA1', '描述': '获取用户信息', '请求方法': 'GET', '请求地址': 'http://test.daishupei.com/api/auth/userInfo', '请求参数': '', '预期结果': '\"errCode\":0'}" ]
+}

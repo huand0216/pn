@@ -1,0 +1,261 @@
+{
+  "uid" : "5c00d26c78924f3d",
+  "name" : "test_order[data8]",
+  "fullName" : "tests.test_3_order.TestOrder#test_order",
+  "historyId" : "20f61eeb6097f53e4e63069ea85794fb",
+  "time" : {
+    "start" : 1625017541800,
+    "stop" : 1625017542342,
+    "duration" : 542
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017533281,
+      "duration" : 287
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1625017533281,
+      "stop" : 1625017533281,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1625017541798,
+      "stop" : 1625017541798,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1625017536075,
+      "stop" : 1625017536380,
+      "duration" : 305
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_3_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "4364-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_3_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case022', '描述': '支付接口', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/pay/orderPay', '请求参数': 'case022', '预期结果': '挂账支付成功'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "b6690e514a6436e9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017416901,
+        "stop" : 1625017417417,
+        "duration" : 516
+      }
+    }, {
+      "uid" : "39fe2726d7705cb5",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '挂账支付成功' in '{\"errCode\":70036,\"msg\":\"订单不存在\"}'",
+      "time" : {
+        "start" : 1625017132101,
+        "stop" : 1625017132273,
+        "duration" : 172
+      }
+    }, {
+      "uid" : "ced767aabff88be8",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '挂账支付成功' in '{\"errCode\":70036,\"msg\":\"订单不存在\"}'",
+      "time" : {
+        "start" : 1625015953556,
+        "stop" : 1625015953721,
+        "duration" : 165
+      }
+    }, {
+      "uid" : "15b2c8a50fd63a7a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624420150603,
+        "stop" : 1624420151854,
+        "duration" : 1251
+      }
+    }, {
+      "uid" : "c80f07bb66846579",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624367031889,
+        "stop" : 1624367033240,
+        "duration" : 1351
+      }
+    }, {
+      "uid" : "e51371d757c32aa4",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '挂账支付成功' in '{\"errCode\":100002,\"msg\":\"您的账户信息已失效，请重新登录！\"}'",
+      "time" : {
+        "start" : 1624366894687,
+        "stop" : 1624366894828,
+        "duration" : 141
+      }
+    }, {
+      "uid" : "fd3b0683d0cbd2ef",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '挂账支付成功' in '{\"errCode\":100002,\"msg\":\"您的账户信息已失效，请重新登录！\"}'",
+      "time" : {
+        "start" : 1624366825317,
+        "stop" : 1624366825453,
+        "duration" : 136
+      }
+    }, {
+      "uid" : "aa8920970cc97e48",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '挂账支付成功' in '{\"errCode\":70036,\"msg\":\"订单不存在\"}'",
+      "time" : {
+        "start" : 1624366682402,
+        "stop" : 1624366682572,
+        "duration" : 170
+      }
+    }, {
+      "uid" : "985b7bf51d4c82fd",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '挂账支付成功' in '{\"errCode\":70036,\"msg\":\"订单不存在\"}'",
+      "time" : {
+        "start" : 1624366336959,
+        "stop" : 1624366337104,
+        "duration" : 145
+      }
+    }, {
+      "uid" : "d1294c0de45ca9d2",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '挂账支付成功' in '{\"errCode\":70036,\"msg\":\"订单不存在\"}'",
+      "time" : {
+        "start" : 1624365294102,
+        "stop" : 1624365294250,
+        "duration" : 148
+      }
+    }, {
+      "uid" : "e09ac8cc86c33af6",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '挂账支付成功' in '{\"errCode\":70036,\"msg\":\"订单不存在\"}'",
+      "time" : {
+        "start" : 1624363911355,
+        "stop" : 1624363911519,
+        "duration" : 164
+      }
+    }, {
+      "uid" : "fb8ec3b908704f28",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624261747587,
+        "stop" : 1624261748489,
+        "duration" : 902
+      }
+    }, {
+      "uid" : "f190535d5e83d0eb",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '挂账支付成功' in '{\"errCode\":70022,\"msg\":\"请确认订单是否已支付成功，以免重复支付\"}'",
+      "time" : {
+        "start" : 1624244418031,
+        "stop" : 1624244418250,
+        "duration" : 219
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5c00d26c78924f3d.json",
+  "parameterValues" : [ "{'caseID': 'case022', '描述': '支付接口', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/pay/orderPay', '请求参数': 'case022', '预期结果': '挂账支付成功'}" ]
+}

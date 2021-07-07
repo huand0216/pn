@@ -1,0 +1,261 @@
+{
+  "uid" : "3a1b25f14aecef58",
+  "name" : "test_order[data9]",
+  "fullName" : "tests.test_3_order.TestOrder#test_order",
+  "historyId" : "dadb497207051ff7d05a4986eff70966",
+  "time" : {
+    "start" : 1625017542346,
+    "stop" : 1625017542553,
+    "duration" : 207
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017533281,
+      "duration" : 287
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1625017533281,
+      "stop" : 1625017533281,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1625017542345,
+      "stop" : 1625017542345,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1625017536075,
+      "stop" : 1625017536380,
+      "duration" : 305
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_3_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "4364-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_3_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case023', '描述': '供应商发货', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/orderLogistic/deliverOrder', '请求参数': 'case023', '预期结果': 'true'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "50d88c262024c9be",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017417421,
+        "stop" : 1625017417602,
+        "duration" : 181
+      }
+    }, {
+      "uid" : "2826d27d7592011b",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":70011,\"msg\":\"订单不存在\"}'",
+      "time" : {
+        "start" : 1625017132300,
+        "stop" : 1625017132453,
+        "duration" : 153
+      }
+    }, {
+      "uid" : "74d1293535b14128",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":70011,\"msg\":\"订单不存在\"}'",
+      "time" : {
+        "start" : 1625015953734,
+        "stop" : 1625015953880,
+        "duration" : 146
+      }
+    }, {
+      "uid" : "469f23eff6e7928d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624420151861,
+        "stop" : 1624420152683,
+        "duration" : 822
+      }
+    }, {
+      "uid" : "76f961006f9fa07c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624367033245,
+        "stop" : 1624367033682,
+        "duration" : 437
+      }
+    }, {
+      "uid" : "b72ecc0c79d5676f",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":100002,\"msg\":\"您的账户信息已失效，请重新登录！\"}'",
+      "time" : {
+        "start" : 1624366894839,
+        "stop" : 1624366894991,
+        "duration" : 152
+      }
+    }, {
+      "uid" : "7bbcb80023ec1ea8",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":100002,\"msg\":\"您的账户信息已失效，请重新登录！\"}'",
+      "time" : {
+        "start" : 1624366825467,
+        "stop" : 1624366825613,
+        "duration" : 146
+      }
+    }, {
+      "uid" : "45897cf54b7b80b3",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":70011,\"msg\":\"订单不存在\"}'",
+      "time" : {
+        "start" : 1624366682583,
+        "stop" : 1624366682748,
+        "duration" : 165
+      }
+    }, {
+      "uid" : "bb66ee1ccac30194",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":70011,\"msg\":\"订单不存在\"}'",
+      "time" : {
+        "start" : 1624366337115,
+        "stop" : 1624366337247,
+        "duration" : 132
+      }
+    }, {
+      "uid" : "6fe1daca2afd25da",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":70011,\"msg\":\"订单不存在\"}'",
+      "time" : {
+        "start" : 1624365294261,
+        "stop" : 1624365294407,
+        "duration" : 146
+      }
+    }, {
+      "uid" : "92488322e22b6d3f",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":70011,\"msg\":\"订单不存在\"}'",
+      "time" : {
+        "start" : 1624363911531,
+        "stop" : 1624363911705,
+        "duration" : 174
+      }
+    }, {
+      "uid" : "d74d684f79115e90",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624261748494,
+        "stop" : 1624261748783,
+        "duration" : 289
+      }
+    }, {
+      "uid" : "53d8beb1ddf6ad66",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":70032,\"msg\":\"发货失败，该订单已发货\"}'",
+      "time" : {
+        "start" : 1624244418266,
+        "stop" : 1624244418513,
+        "duration" : 247
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3a1b25f14aecef58.json",
+  "parameterValues" : [ "{'caseID': 'case023', '描述': '供应商发货', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/orderLogistic/deliverOrder', '请求参数': 'case023', '预期结果': 'true'}" ]
+}

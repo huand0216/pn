@@ -1,0 +1,262 @@
+{
+  "uid" : "de284d08ad41cf9f",
+  "name" : "test_return[data5]",
+  "fullName" : "tests.test_4_return.Test_return#test_return",
+  "historyId" : "0af0b64b40b593f4ce67b24699ec17e4",
+  "time" : {
+    "start" : 1625017543883,
+    "stop" : 1625017544291,
+    "duration" : 408
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017533281,
+      "duration" : 287
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1625017543882,
+      "stop" : 1625017543882,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1625017533281,
+      "stop" : 1625017533281,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1625017536075,
+      "stop" : 1625017536380,
+      "duration" : 305
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_4_return"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_return"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "4364-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_4_return"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case030', '描述': '供应商退货收货', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/orderReturn/confirmReceipt/', '请求参数': '', '预期结果': 'true'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f50dee16c188de36",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":18005,\"msg\":\"该退货单还未发货\"}'",
+      "time" : {
+        "start" : 1625017418856,
+        "stop" : 1625017418950,
+        "duration" : 94
+      }
+    }, {
+      "uid" : "efba0e18e1c3bb94",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":18005,\"msg\":\"该退货单还未发货\"}'",
+      "time" : {
+        "start" : 1625017133359,
+        "stop" : 1625017133456,
+        "duration" : 97
+      }
+    }, {
+      "uid" : "81738d7f52c2bae",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":18005,\"msg\":\"该退货单还未发货\"}'",
+      "time" : {
+        "start" : 1625015954804,
+        "stop" : 1625015954935,
+        "duration" : 131
+      }
+    }, {
+      "uid" : "d05c6ff697361906",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624420155354,
+        "stop" : 1624420155693,
+        "duration" : 339
+      }
+    }, {
+      "uid" : "5532a8e0e8a06b97",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624367036356,
+        "stop" : 1624367036660,
+        "duration" : 304
+      }
+    }, {
+      "uid" : "304d1c796bfd68f2",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":100002,\"msg\":\"您的账户信息已失效，请重新登录！\"}'",
+      "time" : {
+        "start" : 1624366895849,
+        "stop" : 1624366895933,
+        "duration" : 84
+      }
+    }, {
+      "uid" : "ba1511af5f0a7a9",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":100002,\"msg\":\"您的账户信息已失效，请重新登录！\"}'",
+      "time" : {
+        "start" : 1624366826438,
+        "stop" : 1624366826521,
+        "duration" : 83
+      }
+    }, {
+      "uid" : "43942bbf50962155",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":18005,\"msg\":\"该退货单还未发货\"}'",
+      "time" : {
+        "start" : 1624366684110,
+        "stop" : 1624366684330,
+        "duration" : 220
+      }
+    }, {
+      "uid" : "7446f97ab1e1a9c1",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":18005,\"msg\":\"该退货单还未发货\"}'",
+      "time" : {
+        "start" : 1624366338397,
+        "stop" : 1624366338608,
+        "duration" : 211
+      }
+    }, {
+      "uid" : "826c92e545290e92",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":18005,\"msg\":\"该退货单还未发货\"}'",
+      "time" : {
+        "start" : 1624365295317,
+        "stop" : 1624365295422,
+        "duration" : 105
+      }
+    }, {
+      "uid" : "8f6b355a3bc9d044",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":18005,\"msg\":\"该退货单还未发货\"}'",
+      "time" : {
+        "start" : 1624363912635,
+        "stop" : 1624363912765,
+        "duration" : 130
+      }
+    }, {
+      "uid" : "6dd102b445fe7575",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624261750491,
+        "stop" : 1624261750710,
+        "duration" : 219
+      }
+    }, {
+      "uid" : "4e2edb3b02f15f71",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":300017,\"msg\":\"退款总金额大于支付金额，退款失败\"}'",
+      "time" : {
+        "start" : 1624244420783,
+        "stop" : 1624244421012,
+        "duration" : 229
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "de284d08ad41cf9f.json",
+  "parameterValues" : [ "{'caseID': 'case030', '描述': '供应商退货收货', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/orderReturn/confirmReceipt/', '请求参数': '', '预期结果': 'true'}" ]
+}

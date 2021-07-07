@@ -1,0 +1,25 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 'true' in '{\"errCode\":91005,\"msg\":\"机构不存在\",\"data\":null}'",
+      "children" : [ {
+        "name" : "test_others[data4]",
+        "uid" : "c357632d6535f5b9",
+        "parentUid" : "5aa3c0fbcf1aed73cffb8c861598fc84",
+        "status" : "failed",
+        "time" : {
+          "start" : 1625017545493,
+          "stop" : 1625017545647,
+          "duration" : 154
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case037', '描述': '新增常用供应商', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/user/web/orgCollection/addCollectionOrg', '请求参数': 'case037', '预期结果': 'true'}" ]
+      } ],
+      "uid" : "5aa3c0fbcf1aed73cffb8c861598fc84"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

@@ -1,0 +1,245 @@
+{
+  "uid" : "c01b7339d4d5efd0",
+  "name" : "test_parse001[data1]",
+  "fullName" : "tests.test_0_parse.TestParse#test_parse001",
+  "historyId" : "5610f43230637952db69245e606771d3",
+  "time" : {
+    "start" : 1625017533449,
+    "stop" : 1625017534357,
+    "duration" : 908
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017533281,
+      "duration" : 287
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1625017533281,
+      "stop" : 1625017533281,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1625017533449,
+      "stop" : 1625017533449,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_0_parse"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestParse"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "4364-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_0_parse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case002', '描述': 'OE解析接口', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/auto/web/standardData/queryPartByKey', '请求参数': 'case002', '预期结果': '前大灯总成（右）'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a50d6ae1b3a743d4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017407860,
+        "stop" : 1625017409008,
+        "duration" : 1148
+      }
+    }, {
+      "uid" : "cad66cfd5475d531",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017123893,
+        "stop" : 1625017124675,
+        "duration" : 782
+      }
+    }, {
+      "uid" : "fd10273bb3b7826c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625015941600,
+        "stop" : 1625015943536,
+        "duration" : 1936
+      }
+    }, {
+      "uid" : "1d2e71e28c023bbd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624420131741,
+        "stop" : 1624420133042,
+        "duration" : 1301
+      }
+    }, {
+      "uid" : "12efcfa874389ef8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624367008931,
+        "stop" : 1624367009933,
+        "duration" : 1002
+      }
+    }, {
+      "uid" : "15c36635815a6179",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366882424,
+        "stop" : 1624366883274,
+        "duration" : 850
+      }
+    }, {
+      "uid" : "f4477fa63e8f05d5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366811054,
+        "stop" : 1624366812430,
+        "duration" : 1376
+      }
+    }, {
+      "uid" : "e26316ada8c8831d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366674305,
+        "stop" : 1624366675723,
+        "duration" : 1418
+      }
+    }, {
+      "uid" : "121610d3850023ad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366328983,
+        "stop" : 1624366329838,
+        "duration" : 855
+      }
+    }, {
+      "uid" : "800410d3b575aea4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624365287078,
+        "stop" : 1624365287939,
+        "duration" : 861
+      }
+    }, {
+      "uid" : "f6ee891bdeefa44a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624363901206,
+        "stop" : 1624363902127,
+        "duration" : 921
+      }
+    }, {
+      "uid" : "8c6da0850727c65e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624362733045,
+        "stop" : 1624362734206,
+        "duration" : 1161
+      }
+    }, {
+      "uid" : "fd6e8652d1995575",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624261729257,
+        "stop" : 1624261731444,
+        "duration" : 2187
+      }
+    }, {
+      "uid" : "23847a1e6b4ea266",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624244397618,
+        "stop" : 1624244398971,
+        "duration" : 1353
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c01b7339d4d5efd0.json",
+  "parameterValues" : [ "{'caseID': 'case002', '描述': 'OE解析接口', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/auto/web/standardData/queryPartByKey', '请求参数': 'case002', '预期结果': '前大灯总成（右）'}" ]
+}

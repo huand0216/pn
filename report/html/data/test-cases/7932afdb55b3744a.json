@@ -1,0 +1,131 @@
+{
+  "uid" : "7932afdb55b3744a",
+  "name" : "test_inquiry[data2]",
+  "fullName" : "tests.test_1_inquiry.Test_inquiry#test_inquiry",
+  "historyId" : "df7880937eae98d00eb6d055825cb2da",
+  "time" : {
+    "start" : 1624420135174,
+    "stop" : 1624420135777,
+    "duration" : 603
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1624420130622,
+      "stop" : 1624420130623,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1624420130623,
+      "stop" : 1624420131482,
+      "duration" : 859
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1624420135173,
+      "stop" : 1624420135173,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1624420131483,
+      "stop" : 1624420131483,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1624420130623,
+      "stop" : 1624420130623,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1_inquiry"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_inquiry"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "3575-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_1_inquiry"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case005', '描述': '期望供应商匹配', '请求方法': 'POST', '请求地址': 'http://test.daishupei.com/api/user/web/org/getRecommendSupplierList', '请求参数': 'case005', '预期结果': '\"errCode\":0'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7932afdb55b3744a.json",
+  "parameterValues" : [ "{'caseID': 'case005', '描述': '期望供应商匹配', '请求方法': 'POST', '请求地址': 'http://test.daishupei.com/api/user/web/org/getRecommendSupplierList', '请求参数': 'case005', '预期结果': '\"errCode\":0'}" ]
+}

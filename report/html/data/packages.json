@@ -1,0 +1,537 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "tests",
+    "children" : [ {
+      "name" : "test_0_parse",
+      "children" : [ {
+        "name" : "test_parse001[data0]",
+        "uid" : "b20f2e6d6bac0c95",
+        "parentUid" : "75565d7924bc1add49fa9b60a705deab",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017533285,
+          "stop" : 1625017533445,
+          "duration" : 160
+        },
+        "flaky" : false,
+        "parameters" : [ "{'caseID': 'case001', '描述': 'VIN解析接口', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/auto/web/standardData/getVinInfoAndSalesVinInfo', '请求参数': 'case001', '预期结果': '进口宝马'}" ]
+      }, {
+        "name" : "test_parse001[data1]",
+        "uid" : "c01b7339d4d5efd0",
+        "parentUid" : "75565d7924bc1add49fa9b60a705deab",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017533449,
+          "stop" : 1625017534357,
+          "duration" : 908
+        },
+        "flaky" : false,
+        "parameters" : [ "{'caseID': 'case002', '描述': 'OE解析接口', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/auto/web/standardData/queryPartByKey', '请求参数': 'case002', '预期结果': '前大灯总成（右）'}" ]
+      } ],
+      "uid" : "75565d7924bc1add49fa9b60a705deab"
+    }, {
+      "name" : "test_1_inquiry",
+      "children" : [ {
+        "name" : "test_inquiry[data0]",
+        "uid" : "307e5bb38df6f745",
+        "parentUid" : "b08b82348d1defafc7853e19b51e823e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017534360,
+          "stop" : 1625017534579,
+          "duration" : 219
+        },
+        "flaky" : false,
+        "parameters" : [ "{'caseID': 'case003', '描述': '是否存在库存', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/stock/web/parts/stock/getStockInfo', '请求参数': 'case003', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_inquiry[data1]",
+        "uid" : "1ab0fea54e972c45",
+        "parentUid" : "b08b82348d1defafc7853e19b51e823e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017534584,
+          "stop" : 1625017534838,
+          "duration" : 254
+        },
+        "flaky" : false,
+        "parameters" : [ "{'caseID': 'case004', '描述': '获取库存列表', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/stock/web/parts/stock/getOemCodePageList?current=1&size=10', '请求参数': 'case004', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_inquiry[data2]",
+        "uid" : "455bb163b0588751",
+        "parentUid" : "b08b82348d1defafc7853e19b51e823e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017534843,
+          "stop" : 1625017535113,
+          "duration" : 270
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case005', '描述': '期望供应商匹配', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/user/web/org/getRecommendSupplierList', '请求参数': 'case005', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_inquiry[data3]",
+        "uid" : "b41d3984d7c0a1a6",
+        "parentUid" : "b08b82348d1defafc7853e19b51e823e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017535116,
+          "stop" : 1625017535339,
+          "duration" : 223
+        },
+        "flaky" : false,
+        "parameters" : [ "{'caseID': 'case006', '描述': '询价保存草稿', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/inquiry/saveInquiry', '请求参数': 'case006', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_inquiry[data4]",
+        "uid" : "954a1791a510723a",
+        "parentUid" : "b08b82348d1defafc7853e19b51e823e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017535343,
+          "stop" : 1625017535609,
+          "duration" : 266
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case007', '描述': '发布询价', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/inquiry/publishInquiry', '请求参数': 'case007', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_inquiry[data5]",
+        "uid" : "6a72401edeb3970e",
+        "parentUid" : "b08b82348d1defafc7853e19b51e823e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017535613,
+          "stop" : 1625017535977,
+          "duration" : 364
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case008', '描述': '询价单列表', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/inquiry/getInquiryPage?current=1&size=10', '请求参数': 'case008', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_inquiry[data6]",
+        "uid" : "103cdd87d241de3c",
+        "parentUid" : "b08b82348d1defafc7853e19b51e823e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017535980,
+          "stop" : 1625017536072,
+          "duration" : 92
+        },
+        "flaky" : false,
+        "parameters" : [ "{'caseID': 'caseA1', '描述': '获取用户信息', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/auth/userInfo', '请求参数': '', '预期结果': '\"errCode\":0'}" ]
+      } ],
+      "uid" : "b08b82348d1defafc7853e19b51e823e"
+    }, {
+      "name" : "test_2_quote",
+      "children" : [ {
+        "name" : "test_quote[data0]",
+        "uid" : "55e92e127bbaa837",
+        "parentUid" : "be67e612ac649a4190d668f951dc99b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017536381,
+          "stop" : 1625017536524,
+          "duration" : 143
+        },
+        "flaky" : false,
+        "parameters" : [ "{'caseID': 'case009', '描述': '报价单列表', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/queryQuotePage?current=1&size=10', '请求参数': 'case009', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_quote[data1]",
+        "uid" : "eb9a7380556876f2",
+        "parentUid" : "be67e612ac649a4190d668f951dc99b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017536529,
+          "stop" : 1625017536717,
+          "duration" : 188
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case010', '描述': '领取报价单', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/receive', '请求参数': 'case010', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_quote[data2]",
+        "uid" : "18e625638851830",
+        "parentUid" : "be67e612ac649a4190d668f951dc99b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017536722,
+          "stop" : 1625017537058,
+          "duration" : 336
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case011', '描述': '获取报价单详情数据', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/toQuotePage', '请求参数': 'case011', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_quote[data3]",
+        "uid" : "d2b2817a85d61d12",
+        "parentUid" : "be67e612ac649a4190d668f951dc99b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017537061,
+          "stop" : 1625017537272,
+          "duration" : 211
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case012', '描述': '报价保存草稿', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/saveQuote', '请求参数': 'case012', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_quote[data4]",
+        "uid" : "20ded3ea9dbaa847",
+        "parentUid" : "be67e612ac649a4190d668f951dc99b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017537279,
+          "stop" : 1625017539643,
+          "duration" : 2364
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case013', '描述': '提交报价', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/quote', '请求参数': 'case012', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_quote[data5]",
+        "uid" : "27a3e3862fdf9ad9",
+        "parentUid" : "be67e612ac649a4190d668f951dc99b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017539649,
+          "stop" : 1625017539748,
+          "duration" : 99
+        },
+        "flaky" : false,
+        "parameters" : [ "{'caseID': 'caseA2', '描述': '获取用户信息', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/auth/userInfo', '请求参数': '', '预期结果': '\"errCode\":0'}" ]
+      } ],
+      "uid" : "be67e612ac649a4190d668f951dc99b3"
+    }, {
+      "name" : "test_3_order",
+      "children" : [ {
+        "name" : "test_order[data0]",
+        "uid" : "f6ae2b7197f3f88a",
+        "parentUid" : "991fde2dab169ef65d77c59a05f58c50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017539752,
+          "stop" : 1625017540497,
+          "duration" : 745
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case014', '描述': '查看询价单详情', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/inquiry/getInquiryInfo', '请求参数': 'case014', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_order[data1]",
+        "uid" : "eebe8c78b29a83a9",
+        "parentUid" : "991fde2dab169ef65d77c59a05f58c50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017540500,
+          "stop" : 1625017540616,
+          "duration" : 116
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case015', '描述': '询价单创建订单', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/createOrderByInquiry', '请求参数': 'case015', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_order[data2]",
+        "uid" : "bf9b3e20286a108c",
+        "parentUid" : "991fde2dab169ef65d77c59a05f58c50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017540620,
+          "stop" : 1625017540751,
+          "duration" : 131
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case016', '描述': '获取询价单勾选配件信息', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/order/billingDetails', '请求参数': 'case016', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_order[data3]",
+        "uid" : "62d80641695e13d3",
+        "parentUid" : "991fde2dab169ef65d77c59a05f58c50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017540755,
+          "stop" : 1625017540903,
+          "duration" : 148
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case017', '描述': '获取收货地址', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/ins/web/orgDeliveryInfo/selectByOrgDelivery', '请求参数': '', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_order[data4]",
+        "uid" : "d4a54df6e730dd39",
+        "parentUid" : "991fde2dab169ef65d77c59a05f58c50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017540905,
+          "stop" : 1625017541292,
+          "duration" : 387
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case018', '描述': '询价单生成订单', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/order/orderByInquiry', '请求参数': 'case018', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_order[data5]",
+        "uid" : "d83a1e7b07ef2478",
+        "parentUid" : "991fde2dab169ef65d77c59a05f58c50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017541295,
+          "stop" : 1625017541583,
+          "duration" : 288
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case019', '描述': '获取支付信息', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/order/paymentData', '请求参数': 'case019', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_order[data6]",
+        "uid" : "2ae3ad015d445238",
+        "parentUid" : "991fde2dab169ef65d77c59a05f58c50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017541586,
+          "stop" : 1625017541672,
+          "duration" : 86
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case020', '描述': '获取支付二维码有效时间', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/pay/getExpireTime', '请求参数': '', '预期结果': '1440'}" ]
+      }, {
+        "name" : "test_order[data7]",
+        "uid" : "9065e364c0f332ff",
+        "parentUid" : "991fde2dab169ef65d77c59a05f58c50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017541676,
+          "stop" : 1625017541793,
+          "duration" : 117
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case021', '描述': '获取网银支付银行列表', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/pay/getBankTypeList', '请求参数': '', '预期结果': '银行'}" ]
+      }, {
+        "name" : "test_order[data8]",
+        "uid" : "5c00d26c78924f3d",
+        "parentUid" : "991fde2dab169ef65d77c59a05f58c50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017541800,
+          "stop" : 1625017542342,
+          "duration" : 542
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case022', '描述': '支付接口', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/pay/orderPay', '请求参数': 'case022', '预期结果': '挂账支付成功'}" ]
+      }, {
+        "name" : "test_order[data9]",
+        "uid" : "3a1b25f14aecef58",
+        "parentUid" : "991fde2dab169ef65d77c59a05f58c50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017542346,
+          "stop" : 1625017542553,
+          "duration" : 207
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case023', '描述': '供应商发货', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/orderLogistic/deliverOrder', '请求参数': 'case023', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_order[data10]",
+        "uid" : "3aeca6177ac78a2f",
+        "parentUid" : "991fde2dab169ef65d77c59a05f58c50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017542559,
+          "stop" : 1625017542728,
+          "duration" : 169
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case024', '描述': '修理厂收货', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/order/confirmReceive/', '请求参数': '', '预期结果': 'true'}" ]
+      } ],
+      "uid" : "991fde2dab169ef65d77c59a05f58c50"
+    }, {
+      "name" : "test_4_return",
+      "children" : [ {
+        "name" : "test_return[data0]",
+        "uid" : "4b87beae8abcab2e",
+        "parentUid" : "a2a0dc593b3a3cb1e41d12e86e0cbe93",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017542736,
+          "stop" : 1625017543049,
+          "duration" : 313
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case025', '描述': '查看订单详情', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/order/creditOrder/', '请求参数': '', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_return[data1]",
+        "uid" : "430a0da20ac6ba5a",
+        "parentUid" : "a2a0dc593b3a3cb1e41d12e86e0cbe93",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017543052,
+          "stop" : 1625017543316,
+          "duration" : 264
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case026', '描述': '申请退货', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/orderReturn/submitApply', '请求参数': 'case026', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_return[data2]",
+        "uid" : "20f3aef7d641fc32",
+        "parentUid" : "a2a0dc593b3a3cb1e41d12e86e0cbe93",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017543319,
+          "stop" : 1625017543481,
+          "duration" : 162
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case027', '描述': '获取供应商收货地址', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/ins/web/orgDeliveryInfo/selectByOrgDelivery', '请求参数': '', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_return[data3]",
+        "uid" : "10b04cab2d07f709",
+        "parentUid" : "a2a0dc593b3a3cb1e41d12e86e0cbe93",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017543484,
+          "stop" : 1625017543681,
+          "duration" : 197
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case028', '描述': '供应商退货审核通过', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/orderReturn/reviewReturn', '请求参数': 'case028', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_return[data4]",
+        "uid" : "71640d82f2ff1430",
+        "parentUid" : "a2a0dc593b3a3cb1e41d12e86e0cbe93",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017543684,
+          "stop" : 1625017543879,
+          "duration" : 195
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case029', '描述': '修理厂退货发货', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/orderReturn/deliverOrderReturn', '请求参数': 'case029', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_return[data5]",
+        "uid" : "de284d08ad41cf9f",
+        "parentUid" : "a2a0dc593b3a3cb1e41d12e86e0cbe93",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017543883,
+          "stop" : 1625017544291,
+          "duration" : 408
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case030', '描述': '供应商退货收货', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/orderReturn/confirmReceipt/', '请求参数': '', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_return[data6]",
+        "uid" : "e6b70a227b98bd2c",
+        "parentUid" : "a2a0dc593b3a3cb1e41d12e86e0cbe93",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017544294,
+          "stop" : 1625017544445,
+          "duration" : 151
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case031', '描述': '退货单列表', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/orderReturn/findBuyerPage', '请求参数': 'case031', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_return[data7]",
+        "uid" : "27ab72a4c2d33a7e",
+        "parentUid" : "a2a0dc593b3a3cb1e41d12e86e0cbe93",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017544448,
+          "stop" : 1625017544573,
+          "duration" : 125
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case032', '描述': '退货单详情', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/orderReturn/getOrderReturnDetails/', '请求参数': '', '预期结果': '买家'}" ]
+      } ],
+      "uid" : "a2a0dc593b3a3cb1e41d12e86e0cbe93"
+    }, {
+      "name" : "test_5_others",
+      "children" : [ {
+        "name" : "test_others[data0]",
+        "uid" : "c1b27ed68322dd8d",
+        "parentUid" : "3e91a0ef56c70bde72d1fe7ff7d1bae6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017544577,
+          "stop" : 1625017544714,
+          "duration" : 137
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case033', '描述': '新增收货地址', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/ins/web/orgDeliveryInfo/addOrgDelivery', '请求参数': 'case033', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_others[data1]",
+        "uid" : "1ab0b32ffc063820",
+        "parentUid" : "3e91a0ef56c70bde72d1fe7ff7d1bae6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017544718,
+          "stop" : 1625017544896,
+          "duration" : 178
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case034', '描述': '收货地址列表', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/ins/web/orgDeliveryInfo/selectByOrgDelivery', '请求参数': '', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_others[data2]",
+        "uid" : "e90feaedbb0f708",
+        "parentUid" : "3e91a0ef56c70bde72d1fe7ff7d1bae6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017544899,
+          "stop" : 1625017545045,
+          "duration" : 146
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case035', '描述': '删除收货地址', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/ins/web/orgDeliveryInfo/delete', '请求参数': 'case035', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_others[data3]",
+        "uid" : "bc5081de7f28744f",
+        "parentUid" : "3e91a0ef56c70bde72d1fe7ff7d1bae6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017545049,
+          "stop" : 1625017545489,
+          "duration" : 440
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case036', '描述': '匹配供应商（三种匹配类型）', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/user/web/org/getRecommendSupplierList', '请求参数': 'case036', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_others[data4]",
+        "uid" : "c357632d6535f5b9",
+        "parentUid" : "3e91a0ef56c70bde72d1fe7ff7d1bae6",
+        "status" : "failed",
+        "time" : {
+          "start" : 1625017545493,
+          "stop" : 1625017545647,
+          "duration" : 154
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case037', '描述': '新增常用供应商', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/user/web/orgCollection/addCollectionOrg', '请求参数': 'case037', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_others[data5]",
+        "uid" : "aa07694e4c3d4548",
+        "parentUid" : "3e91a0ef56c70bde72d1fe7ff7d1bae6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017545752,
+          "stop" : 1625017546138,
+          "duration" : 386
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case038', '描述': '新增员工', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/user/web/user/addUser', '请求参数': 'case038', '预期结果': '\"errCode\":0'}" ]
+      }, {
+        "name" : "test_others[data6]",
+        "uid" : "e24f1d7e01d2d30a",
+        "parentUid" : "3e91a0ef56c70bde72d1fe7ff7d1bae6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017546141,
+          "stop" : 1625017546294,
+          "duration" : 153
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case039', '描述': '删除员工', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/user/web/user/webDelUser', '请求参数': 'case039', '预期结果': 'true'}" ]
+      }, {
+        "name" : "test_others[data7]",
+        "uid" : "847bded87bb2f4fd",
+        "parentUid" : "3e91a0ef56c70bde72d1fe7ff7d1bae6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1625017546298,
+          "stop" : 1625017546455,
+          "duration" : 157
+        },
+        "flaky" : true,
+        "parameters" : [ "{'caseID': 'case040', '描述': '新增库存', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/stock/web/plat/stock/savePlatStockInfo', '请求参数': 'case040', '预期结果': 'true'}" ]
+      } ],
+      "uid" : "3e91a0ef56c70bde72d1fe7ff7d1bae6"
+    } ],
+    "uid" : "bf49149a3821e34f7608bb6885d52868"
+  } ]
+}

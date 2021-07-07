@@ -1,0 +1,148 @@
+{
+  "uid" : "53d8beb1ddf6ad66",
+  "name" : "test_order[data9]",
+  "fullName" : "tests.test_3_order.TestOrder#test_order",
+  "historyId" : "dadb497207051ff7d05a4986eff70966",
+  "time" : {
+    "start" : 1624244418266,
+    "stop" : 1624244418513,
+    "duration" : 247
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 'true' in '{\"errCode\":70032,\"msg\":\"发货失败，该订单已发货\"}'",
+  "statusTrace" : "self = <tests.test_3_order.TestOrder object at 0x7fe0c1cc4fa0>\ndata = {'caseID': 'case023', '描述': '供应商发货', '操作方（修理厂/供应商）': 'supplierToken', '请求参数': 'case023', ...}\nrepair_shopToken = 'Bearer 7ec720349d3621d498e7fe73c800ddad4b1b0cdf'\nsupplierToken = 'Bearer 7e1c85e76585d54f8500af2125bb6706ca97bd1d'\n\n    @pytest.mark.parametrize(\n        \"data\",excelData\n    )\n    def test_order(self,data,repair_shopToken,supplierToken):\n        caseId = data[OperationExcel.caseId]\n        url = data[OperationExcel.caseUrl]\n        method = data[OperationExcel.caseMethod]\n        # 判断取买家token还是卖家token\n        if data[OperationExcel.caseOperator] == \"repair_shopToken\":\n            headers = {\"Authorization\": repair_shopToken}\n        elif data[OperationExcel.caseOperator] == \"supplierToken\":\n            headers = {\"Authorization\": supplierToken}\n        jsonData = ExcelMappingYaml(filename=\"data.yaml\").get_mappingYaml(data[OperationExcel.caseParameter])\n        expect = data[OperationExcel.caseExpect]\n    \n        if caseId == \"case014\" and method == \"GET\":\n            # jsonData = ExcelMappingYaml(filename=\"data.yaml\").get_mappingYaml(data[OperationExcel.caseId])\n            res = My_request().GET(url=url, headers=headers, params=jsonData)\n            result = res.text\n    \n        if method == \"GET\":\n            res = My_request().GET(url=url,headers=headers,params=jsonData)\n            result = res.text\n    \n        elif method == \"POST\":\n            if caseId == \"case024\":\n                orderId = OperationYaml(filename=\"public.yaml\").readYamlDict()[\"orderId\"]\n                url = url + \"{0}\".format(orderId)    # 将case024拼接上orderId\n            res = My_request().POST(url=url,headers=headers,json=jsonData)\n            result = res.text\n            # 更新case018生成订单参数\n            if caseId == \"case017\":\n                modify_content = OperationYaml(filename=\"data.yaml\").readYamlDict()\n                addressId = res.json()[\"data\"][\"orgDeliveryDTOS\"][0][\"id\"]\n                orgId = res.json()[\"data\"][\"orgDeliveryDTOS\"][0][\"orgId\"]\n                partsList = modify_content[\"case016\"][\"partList\"]\n                modify_content[\"case018\"][\"id\"] = addressId\n                modify_content[\"case018\"][\"params\"][0][\"orgId\"] = orgId\n                modify_content[\"case018\"][\"params\"][0][\"parts\"] = partsList\n                OperationYaml(filename=\"data.yaml\").updateYaml(modifyItem=modify_content)\n            elif caseId == \"case018\":\n                # 更新case019获取支付信息参数\n                modify_data = OperationYaml(filename=\"data.yaml\").readYamlDict()\n                idList = res.json()[\"data\"][\"idList\"]\n                modify_data[\"case019\"][\"idList\"] = idList\n                modify_data[\"case023\"][\"orderId\"] = idList[0]\n                OperationYaml(filename=\"data.yaml\").updateYaml(modifyItem = modify_data)\n                # 更新最新订单id到public.yaml\n                modify_public = OperationYaml(filename=\"public.yaml\").readYamlDict()\n                modify_public[\"orderId\"] = idList[0]\n                OperationYaml(filename=\"public.yaml\").updateYaml(modifyItem = modify_public)\n    \n            elif caseId == \"case019\":\n                # 更新case022支付参数\n                modify_content = OperationYaml(filename=\"data.yaml\").readYamlDict()\n                ids = OperationYaml(filename=\"data.yaml\").readYamlDict()[\"case019\"][\"idList\"]\n                case019_result = res.json()\n                payMoney = str(case019_result[\"data\"][\"list\"][0][\"transportFee\"] + case019_result[\"data\"][\"list\"][0][\"subTotal\"])\n                if case019_result[\"data\"][\"accountPay\"] == 2:\n                    payType = 5   # 平台挂账\n                elif case019_result[\"data\"][\"accountPay\"] == 1:\n                    payType = 3   # 普通挂账\n                modify_content[\"case022\"][\"ids\"] = ids\n                modify_content[\"case022\"][\"payMoney\"] = payMoney\n                modify_content[\"case022\"][\"payType\"] = payType\n                getUrl_prefix = url.split(\".\")[0]\n                returnUrl = modify_content[\"case022\"][\"returnUrl\"]\n                new_returnUrl = returnUrl.replace(returnUrl.split(\".\")[0],getUrl_prefix)\n                modify_content[\"case022\"][\"returnUrl\"] = new_returnUrl   # 替换returnUrl前缀：url同步caseUrl替换成测试环境还是正式环境\n                OperationYaml(filename=\"data.yaml\").updateYaml(modifyItem=modify_content)\n    \n        # 对所有用例进行断言\n>       assert expect in result\nE       assert 'true' in '{\"errCode\":70032,\"msg\":\"发货失败，该订单已发货\"}'\n\ntests/test_3_order.py:88: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1624244397306,
+      "stop" : 1624244397307,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1624244396403,
+      "stop" : 1624244397306,
+      "duration" : 903
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1624244396403,
+      "stop" : 1624244396403,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1624244409728,
+      "stop" : 1624244410345,
+      "duration" : 617
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1624244418265,
+      "stop" : 1624244418265,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1624244396403,
+      "stop" : 1624244396403,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_3_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "9563-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_3_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case023', '描述': '供应商发货', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'POST', '请求地址': 'http://test.daishupei.com/api/parts/web/orderLogistic/deliverOrder', '请求参数': 'case023', '预期结果': 'true'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "53d8beb1ddf6ad66.json",
+  "parameterValues" : [ "{'caseID': 'case023', '描述': '供应商发货', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'POST', '请求地址': 'http://test.daishupei.com/api/parts/web/orderLogistic/deliverOrder', '请求参数': 'case023', '预期结果': 'true'}" ]
+}

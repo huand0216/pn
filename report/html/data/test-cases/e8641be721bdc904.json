@@ -1,0 +1,148 @@
+{
+  "uid" : "e8641be721bdc904",
+  "name" : "test_others[data4]",
+  "fullName" : "tests.test_5_others.Test_others#test_others",
+  "historyId" : "865372f05cf06a1ca278211455095a77",
+  "time" : {
+    "start" : 1625017134741,
+    "stop" : 1625017134863,
+    "duration" : 122
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 'true' in '{\"errCode\":91005,\"msg\":\"机构不存在\",\"data\":null}'",
+  "statusTrace" : "self = <tests.test_5_others.Test_others object at 0x7fc674e22880>\ndata = {'caseID': 'case037', '描述': '新增常用供应商', '操作方（修理厂/供应商）': 'repair_shopToken', '请求参数': 'case037', ...}\nrepair_shopToken = 'Bearer 8856c2d60228d87011016b6f5f62fd8d8920e190'\nsupplierToken = 'Bearer 1a73d0e77e01b532e81180f3ff8bd882c6abb446'\n\n    @pytest.mark.parametrize(\n        \"data\",excelData\n    )\n    def test_others(self,data,repair_shopToken,supplierToken):\n        # 获取到请求需要的参数\n        caseId = data[OperationExcel.caseId]\n        url = data[OperationExcel.caseUrl]\n        method = data[OperationExcel.caseMethod]\n        remark = data[OperationExcel.caseRemarks]\n        operator = data[OperationExcel.caseOperator]\n        parameter = data[OperationExcel.caseParameter]  # 参数\n        expect = data[OperationExcel.caseExpect]\n    \n        if operator == \"repair_shopToken\":\n            headers = {\"Authorization\": repair_shopToken}\n        elif operator == \"supplierToken\":\n            headers = {\"Authorization\": supplierToken}\n        jsonData = ExcelMappingYaml(filename=\"data.yaml\").get_mappingYaml(parameter)\n        if caseId == \"case036\":\n            for i in range(3):\n                jsonData[\"matchType\"] = i+1\n                res = My_request().POST(url=url, headers=headers, json=jsonData)\n                result = res.text\n        elif caseId == \"case035\":\n            res = My_request().POST(url=url, headers=headers, params=jsonData)\n            result = res.text\n        elif caseId == \"case038\":\n            random_int = random.randint(00000000000,99999999999)\n            # 更新掉新增员工的手机号\n            jsonData[\"phone\"] = str(random_int)\n            res = My_request().POST(url=url, headers=headers, json=jsonData)\n            result = res.text\n            # 更新case039、case040的参数\n            del_id = res.json()[\"data\"]\n            modify_data = OperationYaml(filename=\"data.yaml\").readYamlDict()\n            modify_data[\"case039\"][\"id\"] = del_id     # 更新成要删除的id\n            modify_data[\"case040\"][\"oem\"] = str(random_int)\n            OperationYaml(filename=\"data.yaml\").updateYaml(modifyItem=modify_data)   # 更新\n    \n        elif method == \"GET\":\n            res = My_request().GET(url=url, headers=headers, params=jsonData)\n            result = res.text\n        elif method == \"POST\":\n            res = My_request().POST(url=url, headers=headers, json=jsonData)\n            result = res.text\n            # 更新case035的参数\n            if caseId == \"case034\":\n                delDeliveryId = res.json()[\"data\"][\"orgDeliveryDTOS\"][1][\"id\"]\n                modify_data = OperationYaml(filename=\"data.yaml\").readYamlDict()\n                modify_data[\"case035\"][\"id\"] = delDeliveryId\n                OperationYaml(filename=\"data.yaml\").updateYaml(modifyItem=modify_data)  # 更新\n        # 对所有用例进行断言\n>       assert expect in result\nE       assert 'true' in '{\"errCode\":91005,\"msg\":\"机构不存在\",\"data\":null}'\n\ntests/test_5_others.py:68: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1625017126486,
+      "stop" : 1625017126788,
+      "duration" : 302
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1625017123716,
+      "stop" : 1625017123716,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1625017123358,
+      "stop" : 1625017123716,
+      "duration" : 358
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1625017134740,
+      "stop" : 1625017134740,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1625017123358,
+      "stop" : 1625017123358,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1625017123358,
+      "stop" : 1625017123358,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_5_others"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_others"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "4193-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_5_others"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case037', '描述': '新增常用供应商', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/user/web/orgCollection/addCollectionOrg', '请求参数': 'case037', '预期结果': 'true'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e8641be721bdc904.json",
+  "parameterValues" : [ "{'caseID': 'case037', '描述': '新增常用供应商', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/user/web/orgCollection/addCollectionOrg', '请求参数': 'case037', '预期结果': 'true'}" ]
+}

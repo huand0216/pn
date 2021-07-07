@@ -1,0 +1,148 @@
+{
+  "uid" : "ab0aa235008288a1",
+  "name" : "test_return[data0]",
+  "fullName" : "tests.test_4_return.Test_return#test_return",
+  "historyId" : "e9dedf88cb9bb50e6fa4ab7770602772",
+  "time" : {
+    "start" : 1624366337376,
+    "stop" : 1624366337468,
+    "duration" : 92
+  },
+  "status" : "broken",
+  "statusMessage" : "KeyError: 'data'",
+  "statusTrace" : "self = <tests.test_4_return.Test_return object at 0x7fa6366456a0>\ndata = {'caseID': 'case025', '描述': '查看订单详情', '操作方（修理厂/供应商）': 'repair_shopToken', '请求参数': '', ...}\nrepair_shopToken = 'Bearer e84ee1196fe24648b5cb3f5c2e7aa232372af8bf'\nsupplierToken = 'Bearer f743baa62ac2c6fcbe92f350d79709b3fc0db787'\n\n    @pytest.mark.parametrize(\n        \"data\",excelData\n    )\n    def test_return(self,data,repair_shopToken,supplierToken):\n        caseId = data[OperationExcel.caseId]\n        url = data[OperationExcel.caseUrl]\n        method = data[OperationExcel.caseMethod]\n        remark = data[OperationExcel.caseRemarks]\n        operator = data[OperationExcel.caseOperator]\n        parameter = data[OperationExcel.caseParameter]      #参数\n        expect = data[OperationExcel.caseExpect]\n    \n        if operator == \"repair_shopToken\":\n            headers = {\"Authorization\": repair_shopToken}\n        elif operator == \"supplierToken\":\n            headers = {\"Authorization\": supplierToken}\n        jsonData = ExcelMappingYaml(filename=\"data.yaml\").get_mappingYaml(parameter)\n    \n        # 发送请求\n        if (caseId == \"case030\" or caseId == \"case032\") and method == \"GET\":\n            # 将case030拼接上returnId\n            returnId = OperationYaml(filename=\"public.yaml\").readYamlDict()[\"returnId\"]\n            url = url + \"{0}\".format(returnId)\n            res = My_request().GET(url=url, headers=headers, params=jsonData)\n            result = res.text\n    \n        elif method == \"GET\":\n            if caseId == \"case025\":\n                orderId = OperationYaml(filename=\"public.yaml\").readYamlDict()[\"orderId\"]\n                url = url + \"{0}\".format(orderId)  # 将case025拼接上orderId\n            res = My_request().GET(url=url , headers=headers , params = jsonData)\n            result = res.text\n            # 更新case025申请退货参数\n            if caseId == \"case025\":\n                orderReturnDetailDTO = list()\n>               l = res.json()[\"data\"][\"orderDetailVOS\"]\nE               KeyError: 'data'\n\ntests/test_4_return.py:50: KeyError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1624366327181,
+      "stop" : 1624366327181,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1624366331815,
+      "stop" : 1624366332297,
+      "duration" : 482
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1624366327181,
+      "stop" : 1624366327181,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1624366337376,
+      "stop" : 1624366337376,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1624366327691,
+      "stop" : 1624366327691,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1624366327181,
+      "stop" : 1624366327691,
+      "duration" : 510
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_4_return"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_return"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "32994-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_4_return"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case025', '描述': '查看订单详情', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/order/creditOrder/', '请求参数': '', '预期结果': '\"errCode\":0'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ab0aa235008288a1.json",
+  "parameterValues" : [ "{'caseID': 'case025', '描述': '查看订单详情', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/order/creditOrder/', '请求参数': '', '预期结果': '\"errCode\":0'}" ]
+}

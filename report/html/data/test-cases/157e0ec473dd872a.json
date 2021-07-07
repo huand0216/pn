@@ -1,0 +1,133 @@
+{
+  "uid" : "157e0ec473dd872a",
+  "name" : "test_quote[data4]",
+  "fullName" : "tests.test_2_quote.TestQuote#test_quote",
+  "historyId" : "5a2095a7ce335677c589bbeb0a1240ee",
+  "time" : {
+    "start" : 1624366333166,
+    "stop" : 1624366335147,
+    "duration" : 1981
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 'true' in '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}'\n +  where '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}' = <Response [200]>.text",
+  "statusTrace" : "self = <tests.test_2_quote.TestQuote object at 0x7fa6365a4f40>\nsupplierToken = 'Bearer f743baa62ac2c6fcbe92f350d79709b3fc0db787'\ndata = {'caseID': 'case013', '描述': '提交报价', '请求参数': 'case012', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/quote', ...}\n\n    @pytest.mark.parametrize(\n        \"data\",excelData\n    )\n    def test_quote(self,supplierToken,data):\n        caseId = data[OperationExcel.caseId]\n        url = data[OperationExcel.caseUrl]\n        method = data[OperationExcel.caseMethod]\n        jsonData = ExcelMappingYaml(filename=\"data.yaml\").get_mappingYaml(data[OperationExcel.caseParameter])\n        headers = {\"Authorization\": supplierToken}\n        expect = data[OperationExcel.caseExpect]\n    \n        if data[OperationExcel.caseId] == \"case011\":\n            res = My_request().GET(\n                url = url,\n                params = jsonData,\n                headers = headers\n            )\n            result = res.json()\n            # 配件1ID\n            partId_01 = result[\"data\"][\"quoteDetailList\"][0][\"partId\"]\n            originalPriceId_01 = result[\"data\"][\"quoteDetailList\"][0][\"originalPriceId\"]\n            brandPriceId_01 = result[\"data\"][\"quoteDetailList\"][0][\"brandPriceList\"][0][\"id\"]\n            # 配件2ID\n            partId_02 = result[\"data\"][\"quoteDetailList\"][1][\"partId\"]\n            originalPriceId_02 = result[\"data\"][\"quoteDetailList\"][1][\"originalPriceId\"]\n            brandPriceId_02 = result[\"data\"][\"quoteDetailList\"][1][\"brandPriceList\"][0][\"id\"]\n            #主ID\n            inquiryId = OperationYaml(filename=\"public.yaml\").readYamlDict()[\"inquiryId\"]\n            quoteMainId = OperationYaml(filename=\"public.yaml\").readYamlDict()[\"quoteMainId\"]\n    \n            modify_content = OperationYaml(filename=\"data.yaml\").readYamlDict()\n            # print(modify_content,type(modify_content))\n            modify_content[\"case012\"][\"inquiryId\"] = inquiryId\n            modify_content[\"case012\"][\"quoteMainSaveParam\"][\"id\"] = quoteMainId\n            modify_content[\"case012\"][\"quoteDetailParamList\"][0][\"partId\"] = partId_01\n            modify_content[\"case012\"][\"quoteDetailParamList\"][0][\"originalPriceId\"] = originalPriceId_01\n            modify_content[\"case012\"][\"quoteDetailParamList\"][0][\"brandPriceList\"][0][\"id\"]=brandPriceId_01\n    \n            modify_content[\"case012\"][\"quoteDetailParamList\"][1][\"partId\"] = partId_02\n            modify_content[\"case012\"][\"quoteDetailParamList\"][1][\"originalPriceId\"] = originalPriceId_02\n            # old_brandPriceId_02 = modify_content[\"quoteDetailParamList\"][1][\"brandPriceList\"][0][\"id\"]\n            modify_content[\"case012\"][\"quoteDetailParamList\"][1][\"brandPriceList\"][0][\"id\"] = brandPriceId_02\n            # 更新yaml中case012的参数\n            OperationYaml(filename=\"data.yaml\").updateYaml(modifyItem=modify_content)\n    \n        elif method == \"GET\" and data[OperationExcel.caseId] == \"caseA2\":\n            res = My_request().GET(url=url,headers=headers,params=jsonData)\n            # 保存最新报价机构和用户id到public.yaml\n            supplierOrgId = res.json()[\"data\"][\"orgId\"]\n            supplierUserId = res.json()[\"data\"][\"id\"]\n            modify_content = OperationYaml(filename=\"public.yaml\").readYamlDict()\n            modify_content[\"supplierOrgId\"] = supplierOrgId\n            modify_content[\"supplierUserId\"] = supplierUserId\n            OperationYaml(filename=\"public.yaml\").updateYaml( modifyItem=modify_content )\n    \n        elif  caseId == \"case013\" and method == \"POST\":\n            res = My_request().POST(\n                url=url,\n                headers=headers,\n                json=jsonData\n            )\n    \n            # 更新yaml中case015/016的参数\n            quote_main_id = OperationYaml(filename=\"public.yaml\").readYamlDict()[\"quoteMainId\"]\n            select_result = get_connSql(\"select *from quote_detail where quote_main_id = {0}\".format(quote_main_id))\n            idList = list()\n            for i in range(len(select_result)):\n                id = str(select_result[i][\"id\"])\n                idList.append(id)\n            new_content = OperationYaml(filename=\"data.yaml\").readYamlDict()\n            new_content[\"case015\"][\"quoteDetailIdList\"] = idList\n            new_content[\"case016\"][\"idList\"] = idList\n            for idx, item in enumerate(idList):\n                new_content[\"case016\"][\"partList\"][idx][\"id\"] = item\n            write_data = OperationYaml(filename=\"data.yaml\").updateYaml(modifyItem=dict(new_content))\n    \n        elif method == \"POST\":\n            res = My_request().POST(\n                url=url,\n                headers=headers,\n                json=jsonData\n            )\n        elif method == \"GET\":\n            res = My_request().GET(\n                url=url,\n                headers=headers,\n                params = jsonData\n            )\n        assert res.status_code == 200\n>       assert expect in res.text\nE       assert 'true' in '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}'\nE        +  where '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}' = <Response [200]>.text\n\ntests/test_2_quote.py:115: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1624366327181,
+      "stop" : 1624366327181,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1624366331815,
+      "stop" : 1624366332297,
+      "duration" : 482
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1624366327181,
+      "stop" : 1624366327181,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1624366327691,
+      "stop" : 1624366327691,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1624366333165,
+      "stop" : 1624366333165,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_2_quote"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestQuote"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "32994-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_2_quote"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case013', '描述': '提交报价', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/quote', '请求参数': 'case012', '预期结果': 'true'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "157e0ec473dd872a.json",
+  "parameterValues" : [ "{'caseID': 'case013', '描述': '提交报价', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/quote', '请求参数': 'case012', '预期结果': 'true'}" ]
+}

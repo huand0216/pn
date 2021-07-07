@@ -1,0 +1,246 @@
+{
+  "uid" : "1ab0b32ffc063820",
+  "name" : "test_others[data1]",
+  "fullName" : "tests.test_5_others.Test_others#test_others",
+  "historyId" : "6d8bf86bd1e3f719c615a23fa67b6fd9",
+  "time" : {
+    "start" : 1625017544718,
+    "stop" : 1625017544896,
+    "duration" : 178
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017533281,
+      "duration" : 287
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1625017544717,
+      "stop" : 1625017544717,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1625017533281,
+      "stop" : 1625017533281,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1625017536075,
+      "stop" : 1625017536380,
+      "duration" : 305
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_5_others"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_others"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "4364-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_5_others"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case034', '描述': '收货地址列表', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/ins/web/orgDeliveryInfo/selectByOrgDelivery', '请求参数': '', '预期结果': '\"errCode\":0'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "786c5ca06f77624b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017419359,
+        "stop" : 1625017419527,
+        "duration" : 168
+      }
+    }, {
+      "uid" : "3d59671ac0974b6f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017133919,
+        "stop" : 1625017134143,
+        "duration" : 224
+      }
+    }, {
+      "uid" : "1e101bc6db11ef20",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625015955353,
+        "stop" : 1625015955541,
+        "duration" : 188
+      }
+    }, {
+      "uid" : "c2830552199f315d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624420156961,
+        "stop" : 1624420157279,
+        "duration" : 318
+      }
+    }, {
+      "uid" : "1dbd82a5713ecc43",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624367037434,
+        "stop" : 1624367037569,
+        "duration" : 135
+      }
+    }, {
+      "uid" : "6914994ff78b3b10",
+      "status" : "broken",
+      "statusDetails" : "KeyError: 'data'",
+      "time" : {
+        "start" : 1624366896335,
+        "stop" : 1624366896419,
+        "duration" : 84
+      }
+    }, {
+      "uid" : "44e7ddd2f556e525",
+      "status" : "broken",
+      "statusDetails" : "KeyError: 'data'",
+      "time" : {
+        "start" : 1624366826898,
+        "stop" : 1624366826969,
+        "duration" : 71
+      }
+    }, {
+      "uid" : "1a78735f5ed45f41",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366339052,
+        "stop" : 1624366339238,
+        "duration" : 186
+      }
+    }, {
+      "uid" : "6e0fd0c81b649d35",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624365295934,
+        "stop" : 1624365296224,
+        "duration" : 290
+      }
+    }, {
+      "uid" : "a4687423b5792807",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624363913242,
+        "stop" : 1624363913436,
+        "duration" : 194
+      }
+    }, {
+      "uid" : "b7e436c522c61598",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624261751065,
+        "stop" : 1624261751211,
+        "duration" : 146
+      }
+    }, {
+      "uid" : "87acc34e34bbd22e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624244421860,
+        "stop" : 1624244422349,
+        "duration" : 489
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1ab0b32ffc063820.json",
+  "parameterValues" : [ "{'caseID': 'case034', '描述': '收货地址列表', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/ins/web/orgDeliveryInfo/selectByOrgDelivery', '请求参数': '', '预期结果': '\"errCode\":0'}" ]
+}

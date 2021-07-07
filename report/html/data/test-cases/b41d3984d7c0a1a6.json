@@ -1,0 +1,245 @@
+{
+  "uid" : "b41d3984d7c0a1a6",
+  "name" : "test_inquiry[data3]",
+  "fullName" : "tests.test_1_inquiry.Test_inquiry#test_inquiry",
+  "historyId" : "981f6bfa1b73549b3de959104094d5c8",
+  "time" : {
+    "start" : 1625017535116,
+    "stop" : 1625017535339,
+    "duration" : 223
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017533281,
+      "duration" : 287
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1625017533281,
+      "stop" : 1625017533281,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1625017535116,
+      "stop" : 1625017535116,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1_inquiry"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_inquiry"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "4364-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_1_inquiry"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case006', '描述': '询价保存草稿', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/inquiry/saveInquiry', '请求参数': 'case006', '预期结果': 'true'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "390f8944639631d0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017410204,
+        "stop" : 1625017410387,
+        "duration" : 183
+      }
+    }, {
+      "uid" : "2c864e80322d6ab8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017125546,
+        "stop" : 1625017125775,
+        "duration" : 229
+      }
+    }, {
+      "uid" : "6127e0aee9195e39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625015944280,
+        "stop" : 1625015944495,
+        "duration" : 215
+      }
+    }, {
+      "uid" : "1d3ccae4d38b1d1b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624420135783,
+        "stop" : 1624420136091,
+        "duration" : 308
+      }
+    }, {
+      "uid" : "89a457e3e7faac26",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624367011677,
+        "stop" : 1624367016693,
+        "duration" : 5016
+      }
+    }, {
+      "uid" : "cd97b01bce6daaa9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366885319,
+        "stop" : 1624366885834,
+        "duration" : 515
+      }
+    }, {
+      "uid" : "977a7f136a53f88a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366814650,
+        "stop" : 1624366814827,
+        "duration" : 177
+      }
+    }, {
+      "uid" : "a81e7849fc1fc0e0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366676527,
+        "stop" : 1624366676729,
+        "duration" : 202
+      }
+    }, {
+      "uid" : "81472d5af3dbf2c1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366330668,
+        "stop" : 1624366330959,
+        "duration" : 291
+      }
+    }, {
+      "uid" : "fe54e7e3e7e9596d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624365288694,
+        "stop" : 1624365288908,
+        "duration" : 214
+      }
+    }, {
+      "uid" : "4ea9467110176ea3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624363902773,
+        "stop" : 1624363902965,
+        "duration" : 192
+      }
+    }, {
+      "uid" : "68b661649b78ba75",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624362736099,
+        "stop" : 1624362737322,
+        "duration" : 1223
+      }
+    }, {
+      "uid" : "fbf5405e9ddbb995",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624261734351,
+        "stop" : 1624261734595,
+        "duration" : 244
+      }
+    }, {
+      "uid" : "575e7a2bb203bdfc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624244402575,
+        "stop" : 1624244402787,
+        "duration" : 212
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b41d3984d7c0a1a6.json",
+  "parameterValues" : [ "{'caseID': 'case006', '描述': '询价保存草稿', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/inquiry/saveInquiry', '请求参数': 'case006', '预期结果': 'true'}" ]
+}

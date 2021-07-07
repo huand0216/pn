@@ -1,0 +1,148 @@
+{
+  "uid" : "5fc83a788f69fa4",
+  "name" : "test_return[data1]",
+  "fullName" : "tests.test_4_return.Test_return#test_return",
+  "historyId" : "eec20df44cc817db33344a32f1673e69",
+  "time" : {
+    "start" : 1624363911928,
+    "stop" : 1624363912059,
+    "duration" : 131
+  },
+  "status" : "broken",
+  "statusMessage" : "KeyError: 'data'",
+  "statusTrace" : "self = <tests.test_4_return.Test_return object at 0x7f9123bf7a60>\ndata = {'caseID': 'case026', '描述': '申请退货', '操作方（修理厂/供应商）': 'repair_shopToken', '请求参数': 'case026', ...}\nrepair_shopToken = 'Bearer 48b1cd2e4c03bdeb83eee5913288e9594a0da8c5'\nsupplierToken = 'Bearer 6d8311814d17023d362e3edc72a35068f7381467'\n\n    @pytest.mark.parametrize(\n        \"data\",excelData\n    )\n    def test_return(self,data,repair_shopToken,supplierToken):\n        caseId = data[OperationExcel.caseId]\n        url = data[OperationExcel.caseUrl]\n        method = data[OperationExcel.caseMethod]\n        remark = data[OperationExcel.caseRemarks]\n        operator = data[OperationExcel.caseOperator]\n        parameter = data[OperationExcel.caseParameter]      #参数\n        expect = data[OperationExcel.caseExpect]\n    \n        if operator == \"repair_shopToken\":\n            headers = {\"Authorization\": repair_shopToken}\n        elif operator == \"supplierToken\":\n            headers = {\"Authorization\": supplierToken}\n        jsonData = ExcelMappingYaml(filename=\"data.yaml\").get_mappingYaml(parameter)\n    \n        # 发送请求\n        if (caseId == \"case030\" or caseId == \"case032\") and method == \"GET\":\n            # 将case030拼接上returnId\n            returnId = OperationYaml(filename=\"public.yaml\").readYamlDict()[\"returnId\"]\n            url = url + \"{0}\".format(returnId)\n            res = My_request().GET(url=url, headers=headers, params=jsonData)\n            result = res.text\n    \n        elif method == \"GET\":\n            if caseId == \"case025\":\n                orderId = OperationYaml(filename=\"public.yaml\").readYamlDict()[\"orderId\"]\n                url = url + \"{0}\".format(orderId)  # 将case025拼接上orderId\n            res = My_request().GET(url=url , headers=headers , params = jsonData)\n            result = res.text\n            # 更新case025申请退货参数\n            if caseId == \"case025\":\n                orderReturnDetailDTO = list()\n                l = res.json()[\"data\"][\"orderDetailVOS\"]\n                for i in range(len(l)-1):\n                    orderReturnDetail = {\"orderDetailId\": \"\", \"returnCount\": 1, \"backMoney\": 200, \"degreeVersion\": 1}\n                    orderReturnDetail[\"orderDetailId\"] = l[i][\"id\"]\n                    orderReturnDetail[\"returnCount\"] = l[i][\"partCount\"]\n                    orderReturnDetail[\"backMoney\"] = l[i][\"subtotal\"]\n                    orderReturnDetailDTO.append(orderReturnDetail)\n                modify_data = OperationYaml(filename=\"data.yaml\").readYamlDict()\n                modify_data[\"case026\"][\"orderReturnDetailDTO\"] = orderReturnDetailDTO  # 更新子订单orderReturnDetailDTO\n                modify_data[\"case026\"][\"orderId\"] = res.json()[\"data\"][\"orderMainVO\"][\"id\"]  # 更新主订单id\n                modify_data[\"case026\"][\"returnAmount\"] = res.json()[\"data\"][\"orderMainVO\"][\"finalPrice\"]  # 更新退货总金额\n                OperationYaml(filename=\"data.yaml\").updateYaml(modifyItem=modify_data)\n    \n        elif method == \"POST\":\n            res = My_request().POST(url=url,headers=headers,json=jsonData)\n            result = res.text\n            '''1.拿到退货单id更新到public.yaml\n            '''\n            if caseId == \"case026\":\n>               returnId = res.json()[\"data\"]\nE               KeyError: 'data'\n\ntests/test_4_return.py:69: KeyError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1624363911927,
+      "stop" : 1624363911927,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1624363901015,
+      "stop" : 1624363901015,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1624363900546,
+      "stop" : 1624363900546,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1624363903607,
+      "stop" : 1624363904086,
+      "duration" : 479
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1624363900547,
+      "stop" : 1624363901015,
+      "duration" : 468
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1624363900546,
+      "stop" : 1624363900546,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_4_return"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_return"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "32101-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_4_return"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case026', '描述': '申请退货', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/orderReturn/submitApply', '请求参数': 'case026', '预期结果': '\"errCode\":0'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5fc83a788f69fa4.json",
+  "parameterValues" : [ "{'caseID': 'case026', '描述': '申请退货', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/orderReturn/submitApply', '请求参数': 'case026', '预期结果': '\"errCode\":0'}" ]
+}

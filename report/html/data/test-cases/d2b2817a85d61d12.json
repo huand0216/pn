@@ -1,0 +1,242 @@
+{
+  "uid" : "d2b2817a85d61d12",
+  "name" : "test_quote[data3]",
+  "fullName" : "tests.test_2_quote.TestQuote#test_quote",
+  "historyId" : "68b772324010bc9b7c0eb4996bd60ba7",
+  "time" : {
+    "start" : 1625017537061,
+    "stop" : 1625017537272,
+    "duration" : 211
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1625017533281,
+      "stop" : 1625017533281,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1625017536075,
+      "stop" : 1625017536380,
+      "duration" : 305
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1625017537060,
+      "stop" : 1625017537060,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_2_quote"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestQuote"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "4364-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_2_quote"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case012', '描述': '报价保存草稿', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/saveQuote', '请求参数': 'case012', '预期结果': 'true'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "7325bbe6228ea9a4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017412225,
+        "stop" : 1625017412379,
+        "duration" : 154
+      }
+    }, {
+      "uid" : "7c94713d16aab5e6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017127529,
+        "stop" : 1625017127712,
+        "duration" : 183
+      }
+    }, {
+      "uid" : "265492c9ac8e6e7d",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}'\n +  where '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}' = <Response [200]>.text",
+      "time" : {
+        "start" : 1625015946186,
+        "stop" : 1625015946344,
+        "duration" : 158
+      }
+    }, {
+      "uid" : "81d36017df3b4fb8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624420144245,
+        "stop" : 1624420144686,
+        "duration" : 441
+      }
+    }, {
+      "uid" : "b2980d28ba900f71",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624367024200,
+        "stop" : 1624367024683,
+        "duration" : 483
+      }
+    }, {
+      "uid" : "a25d41f967d495c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366892068,
+        "stop" : 1624366892230,
+        "duration" : 162
+      }
+    }, {
+      "uid" : "994cb56bcf574923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366822232,
+        "stop" : 1624366822475,
+        "duration" : 243
+      }
+    }, {
+      "uid" : "14dd59b40027c900",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}'\n +  where '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}' = <Response [200]>.text",
+      "time" : {
+        "start" : 1624366678522,
+        "stop" : 1624366678660,
+        "duration" : 138
+      }
+    }, {
+      "uid" : "7cdafa9a533bd13b",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}'\n +  where '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}' = <Response [200]>.text",
+      "time" : {
+        "start" : 1624366332976,
+        "stop" : 1624366333150,
+        "duration" : 174
+      }
+    }, {
+      "uid" : "f6cb9ee4ce43c4e8",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}'\n +  where '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}' = <Response [200]>.text",
+      "time" : {
+        "start" : 1624365290174,
+        "stop" : 1624365290395,
+        "duration" : 221
+      }
+    }, {
+      "uid" : "105b7d09d9cf8ba2",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}'\n +  where '{\"errCode\":100000,\"msg\":\"服务器繁忙，请稍后再试！\"}' = <Response [200]>.text",
+      "time" : {
+        "start" : 1624363904553,
+        "stop" : 1624363904715,
+        "duration" : 162
+      }
+    }, {
+      "uid" : "8daad52bf0fe24a1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624261743860,
+        "stop" : 1624261743991,
+        "duration" : 131
+      }
+    }, {
+      "uid" : "dac13a0d16f58331",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624244412640,
+        "stop" : 1624244412851,
+        "duration" : 211
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d2b2817a85d61d12.json",
+  "parameterValues" : [ "{'caseID': 'case012', '描述': '报价保存草稿', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/saveQuote', '请求参数': 'case012', '预期结果': 'true'}" ]
+}

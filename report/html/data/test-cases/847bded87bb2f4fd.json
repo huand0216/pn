@@ -1,0 +1,230 @@
+{
+  "uid" : "847bded87bb2f4fd",
+  "name" : "test_others[data7]",
+  "fullName" : "tests.test_5_others.Test_others#test_others",
+  "historyId" : "f4ef874168cbe5e07aca7890ef4f2ad4",
+  "time" : {
+    "start" : 1625017546298,
+    "stop" : 1625017546455,
+    "duration" : 157
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017533281,
+      "duration" : 287
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1625017533281,
+      "stop" : 1625017533281,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1625017536075,
+      "stop" : 1625017536380,
+      "duration" : 305
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1625017546297,
+      "stop" : 1625017546297,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_5_others"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_others"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "4364-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_5_others"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case040', '描述': '新增库存', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/stock/web/plat/stock/savePlatStockInfo', '请求参数': 'case040', '预期结果': 'true'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "97067f5cc72f1146",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017135389,
+        "stop" : 1625017135528,
+        "duration" : 139
+      }
+    }, {
+      "uid" : "2876e49c2d05e5a3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625015956640,
+        "stop" : 1625015956804,
+        "duration" : 164
+      }
+    }, {
+      "uid" : "ed4980c02e425189",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624420159871,
+        "stop" : 1624420160098,
+        "duration" : 227
+      }
+    }, {
+      "uid" : "7dc69e31f05fbacf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624367039012,
+        "stop" : 1624367039144,
+        "duration" : 132
+      }
+    }, {
+      "uid" : "60ddc49923c454f",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":100002,\"msg\":\"您的账户信息已失效，请重新登录！\"}'",
+      "time" : {
+        "start" : 1624366898014,
+        "stop" : 1624366898226,
+        "duration" : 212
+      }
+    }, {
+      "uid" : "99425a62810a53af",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'true' in '{\"errCode\":100002,\"msg\":\"您的账户信息已失效，请重新登录！\"}'",
+      "time" : {
+        "start" : 1624366828301,
+        "stop" : 1624366828579,
+        "duration" : 278
+      }
+    }, {
+      "uid" : "7c913b709ee84291",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366341125,
+        "stop" : 1624366341309,
+        "duration" : 184
+      }
+    }, {
+      "uid" : "61093b4222ba91b7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624363915315,
+        "stop" : 1624363915642,
+        "duration" : 327
+      }
+    }, {
+      "uid" : "622a8756be09f193",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624261753470,
+        "stop" : 1624261753579,
+        "duration" : 109
+      }
+    }, {
+      "uid" : "d215ffeb0588a825",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624244425245,
+        "stop" : 1624244425552,
+        "duration" : 307
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "847bded87bb2f4fd.json",
+  "parameterValues" : [ "{'caseID': 'case040', '描述': '新增库存', '操作方（修理厂/供应商）': 'supplierToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/stock/web/plat/stock/savePlatStockInfo', '请求参数': 'case040', '预期结果': 'true'}" ]
+}

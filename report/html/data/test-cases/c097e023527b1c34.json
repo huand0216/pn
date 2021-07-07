@@ -1,0 +1,133 @@
+{
+  "uid" : "c097e023527b1c34",
+  "name" : "test_inquiry[data5]",
+  "fullName" : "tests.test_1_inquiry.Test_inquiry#test_inquiry",
+  "historyId" : "f3712bd87dcbd4faee6fe4576fdc0613",
+  "time" : {
+    "start" : 1624363903264,
+    "stop" : 1624363903513,
+    "duration" : 249
+  },
+  "status" : "broken",
+  "statusMessage" : "IndexError: tuple index out of range",
+  "statusTrace" : "self = <tests.test_1_inquiry.Test_inquiry object at 0x7f9123ecc7f0>\ndata = {'caseID': 'case008', '描述': '询价单列表', '请求参数': 'case008', '请求地址': 'https://www.daishupei.com/api/parts/web/inquiry/getInquiryPage?current=1&size=10', ...}\nrepair_shopToken = 'Bearer 48b1cd2e4c03bdeb83eee5913288e9594a0da8c5'\n\n    @pytest.mark.parametrize(\n        \"data\",excelData\n    )\n    def test_inquiry(self,data,repair_shopToken):\n        url = data[OperationExcel.caseUrl]\n        method = data[OperationExcel.caseMethod]\n        jsonData = ExcelMappingYaml(filename=\"data.yaml\").get_mappingYaml(key=data[OperationExcel.caseParameter])\n        headers = {\"Authorization\": repair_shopToken}\n        expect = data[OperationExcel.caseExpect]\n    \n        if data[OperationExcel.caseId] == \"case008\":\n            res = My_request().my_request(url=url,method=method,json=jsonData,headers=headers\n                                        )\n            inquiryId = res.json()[\"data\"][\"records\"][0][\"id\"]\n            # 将最新的询价单id和报价单id写入yaml文件\n            modify_public = OperationYaml(filename=\"public.yaml\").readYamlDict()\n            modify_public[\"inquiryId\"] = str(inquiryId)\n    \n            sql = \"select *from quote_main where inquiry_id = {0};\".format(inquiryId)\n            selectResult = get_connSql(sql)\n>           newQuoteMainId = str(selectResult[0][\"id\"])\nE           IndexError: tuple index out of range\n\ntests/test_1_inquiry.py:37: IndexError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1624363901015,
+      "stop" : 1624363901015,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1624363900546,
+      "stop" : 1624363900546,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1624363900547,
+      "stop" : 1624363901015,
+      "duration" : 468
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1624363903263,
+      "stop" : 1624363903264,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1624363900546,
+      "stop" : 1624363900546,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1_inquiry"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_inquiry"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "32101-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_1_inquiry"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case008', '描述': '询价单列表', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/inquiry/getInquiryPage?current=1&size=10', '请求参数': 'case008', '预期结果': '\"errCode\":0'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c097e023527b1c34.json",
+  "parameterValues" : [ "{'caseID': 'case008', '描述': '询价单列表', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/parts/web/inquiry/getInquiryPage?current=1&size=10', '请求参数': 'case008', '预期结果': '\"errCode\":0'}" ]
+}

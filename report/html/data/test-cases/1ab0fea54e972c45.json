@@ -1,0 +1,245 @@
+{
+  "uid" : "1ab0fea54e972c45",
+  "name" : "test_inquiry[data1]",
+  "fullName" : "tests.test_1_inquiry.Test_inquiry#test_inquiry",
+  "historyId" : "388791669fa79a486e03472ed1e768df",
+  "time" : {
+    "start" : 1625017534584,
+    "stop" : 1625017534838,
+    "duration" : 254
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017533281,
+      "duration" : 287
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1625017533281,
+      "stop" : 1625017533281,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1625017534583,
+      "stop" : 1625017534583,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_1_inquiry"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_inquiry"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "4364-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_1_inquiry"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case004', '描述': '获取库存列表', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/stock/web/parts/stock/getOemCodePageList?current=1&size=10', '请求参数': 'case004', '预期结果': '\"errCode\":0'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3dd372275abbf969",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017409526,
+        "stop" : 1625017409831,
+        "duration" : 305
+      }
+    }, {
+      "uid" : "2ec0f5ff98f2f7a2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017124928,
+        "stop" : 1625017125171,
+        "duration" : 243
+      }
+    }, {
+      "uid" : "9430ab6e5ba81aaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625015943772,
+        "stop" : 1625015943979,
+        "duration" : 207
+      }
+    }, {
+      "uid" : "f6db4371a16ac202",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624420134290,
+        "stop" : 1624420135163,
+        "duration" : 873
+      }
+    }, {
+      "uid" : "facaa1e3db8ef11f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624367010577,
+        "stop" : 1624367011358,
+        "duration" : 781
+      }
+    }, {
+      "uid" : "19db6c88abe20386",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366883994,
+        "stop" : 1624366884911,
+        "duration" : 917
+      }
+    }, {
+      "uid" : "626c4859b6d52869",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366813172,
+        "stop" : 1624366814139,
+        "duration" : 967
+      }
+    }, {
+      "uid" : "8e6d1985088a5622",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366675974,
+        "stop" : 1624366676233,
+        "duration" : 259
+      }
+    }, {
+      "uid" : "e7603a172ea56869",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366330068,
+        "stop" : 1624366330298,
+        "duration" : 230
+      }
+    }, {
+      "uid" : "1a53338a2cad478d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624365288171,
+        "stop" : 1624365288387,
+        "duration" : 216
+      }
+    }, {
+      "uid" : "ad8fcdb42b8597c7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624363902347,
+        "stop" : 1624363902555,
+        "duration" : 208
+      }
+    }, {
+      "uid" : "a0d6a282361ca014",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624362735021,
+        "stop" : 1624362735775,
+        "duration" : 754
+      }
+    }, {
+      "uid" : "a6559ac34e388a8c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624261733012,
+        "stop" : 1624261733869,
+        "duration" : 857
+      }
+    }, {
+      "uid" : "c5bd2976de20da6c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624244400053,
+        "stop" : 1624244401602,
+        "duration" : 1549
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1ab0fea54e972c45.json",
+  "parameterValues" : [ "{'caseID': 'case004', '描述': '获取库存列表', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/stock/web/parts/stock/getOemCodePageList?current=1&size=10', '请求参数': 'case004', '预期结果': '\"errCode\":0'}" ]
+}

@@ -1,0 +1,427 @@
+case001:
+  vinCode: WBAPX32060C186115
+case002:
+  key: 大灯
+  maker: 进口宝马
+  mjsid: false
+  optionCode: '000'
+  vinCode: WBAPX32060C186115
+  vinType: 1
+case003:
+  maker: 进口宝马
+  oem: '63127177729'
+case004:
+  maker: 进口宝马
+  oem: '63127177729'
+  quality: ''
+case005:
+  latitude: 30.32461
+  longitude: 120.0894
+  maker: 进口宝马
+  matchType: 1
+case006:
+  images: []
+  inquiryDetailParams:
+  - comment: ''
+    containFlag: null
+    count: '1'
+    image: l9XABYsI7gNhJEEksNH1t4U15AfH0urC8CO7+qi28c0=
+    imagePrePath: Bmw
+    localInventory: 0
+    oem: '63127177730'
+    partId: null
+    partImg: ''
+    partName: 前大灯总成（右）
+    partNumber: '63127177730'
+    partPrice: '6510.00'
+    partRefOnImage: '01'
+    partType: null
+    purchasePrice: null
+    qty: null
+    rank: null
+    referencePrice: '6510.00'
+    remark: ''
+    replacePrice: null
+    reqPartNumber: null
+    reqPartPrice: null
+    srcPartName: 大灯 右
+    srcPartNumber: null
+    standardName: 前大灯总成（右）
+    standardPartName: 前大灯总成（右）
+    stockInfo: true
+    subChainFlag: null
+    substitute: ''
+    thumbnailImage: null
+    value: 前大灯总成（右）
+  - comment: ''
+    containFlag: null
+    count: '1'
+    image: l9XABYsI7gNhJEEksNH1t4U15AfH0urC8CO7+qi28c0=
+    imagePrePath: Bmw
+    localInventory: 0
+    oem: '63127177729'
+    partId: null
+    partImg: ''
+    partName: 前大灯总成（左）
+    partNumber: '63127177729'
+    partPrice: '6510.00'
+    partRefOnImage: '01'
+    partType: null
+    purchasePrice: null
+    qty: null
+    rank: null
+    referencePrice: '6510.00'
+    remark: ''
+    replacePrice: null
+    reqPartNumber: null
+    reqPartPrice: null
+    srcPartName: 大灯 左
+    srcPartNumber: null
+    standardName: 前大灯总成（左）
+    standardPartName: 前大灯总成（左）
+    stockInfo: true
+    subChainFlag: null
+    substitute: ''
+    thumbnailImage: null
+    value: 前大灯总成（左）
+  - count: '1'
+    image: ''
+    oem: ''
+    partImg: ''
+    partName: ''
+    partPrice: ''
+    remark: ''
+    standardName: ''
+    stockInfo: false
+  inquiryMainParam:
+    brand: 宝马
+    carInfo: null
+    carSerial: 5 Series/5系
+    id: null
+    imagePrePath: Bmw
+    inquiryType: 10
+    invoice: 2
+    maker: 进口宝马
+    mjsid: false
+    modelInquiry: false
+    motor: 2.0T
+    optionCode: '000'
+    optionInfo: ''
+    plateNum: ''
+    produceYear: ''
+    quality: 0,1
+    remark: ''
+    select: 1
+    transMission: 6AT
+    vin: WBAPX32060C186115
+  orgIdList:
+  - 9656
+  vinType: 1
+case007:
+  images: []
+  inquiryDetailParams:
+  - comment: ''
+    containFlag: null
+    count: '1'
+    image: l9XABYsI7gNhJEEksNH1t4U15AfH0urC8CO7+qi28c0=
+    imagePrePath: Bmw
+    localInventory: 0
+    oem: '63127177730'
+    partId: null
+    partImg: ''
+    partName: 前大灯总成（右）
+    partNumber: '63127177730'
+    partPrice: '6510.00'
+    partRefOnImage: '01'
+    partType: null
+    purchasePrice: null
+    qty: null
+    rank: null
+    referencePrice: '6510.00'
+    remark: ''
+    replacePrice: null
+    reqPartNumber: null
+    reqPartPrice: null
+    srcPartName: 大灯 右
+    srcPartNumber: null
+    standardName: 前大灯总成（右）
+    standardPartName: 前大灯总成（右）
+    stockInfo: true
+    subChainFlag: null
+    substitute: ''
+    thumbnailImage: null
+    value: 前大灯总成（右）
+  - comment: ''
+    containFlag: null
+    count: '1'
+    image: l9XABYsI7gNhJEEksNH1t4U15AfH0urC8CO7+qi28c0=
+    imagePrePath: Bmw
+    localInventory: 0
+    oem: '63127177729'
+    partId: null
+    partImg: ''
+    partName: 前大灯总成（左）
+    partNumber: '63127177729'
+    partPrice: '6510.00'
+    partRefOnImage: '01'
+    partType: null
+    purchasePrice: null
+    qty: null
+    rank: null
+    referencePrice: '6510.00'
+    remark: ''
+    replacePrice: null
+    reqPartNumber: null
+    reqPartPrice: null
+    srcPartName: 大灯 左
+    srcPartNumber: null
+    standardName: 前大灯总成（左）
+    standardPartName: 前大灯总成（左）
+    stockInfo: true
+    subChainFlag: null
+    substitute: ''
+    thumbnailImage: null
+    value: 前大灯总成（左）
+  - count: '1'
+    image: ''
+    oem: ''
+    partImg: ''
+    partName: ''
+    partPrice: ''
+    remark: ''
+    standardName: ''
+    stockInfo: false
+  inquiryMainParam:
+    brand: 宝马
+    carInfo: null
+    carSerial: 5 Series/5系
+    id: null
+    imagePrePath: Bmw
+    inquiryType: 10
+    invoice: 2
+    maker: 进口宝马
+    mjsid: false
+    modelInquiry: false
+    motor: 2.0T
+    optionCode: '000'
+    optionInfo: ''
+    plateNum: ''
+    produceYear: ''
+    quality: 0,1
+    remark: ''
+    select: 1
+    transMission: 6AT
+    vin: WBAPX32060C186115
+  orgIdList:
+  - 19478
+  publishType: 2
+  vinType: 1
+case008:
+  empName: ''
+  endDate: ''
+  inquiryCode: ''
+  inquiryStatus: '-1'
+  plateNum: ''
+  startDate: ''
+  vin: ''
+case009:
+  endDate: ''
+  plateNum: ''
+  startDate: ''
+  status: '-1'
+  vin: ''
+case010:
+  quoteMasterId: '1410051860371062786'
+case011:
+  quoteMainId: '1410051860371062786'
+case012:
+  inquiryId: '1410051860278788097'
+  quoteDetailParamList:
+  - appendFlag: 0
+    brandPriceList:
+    - brandAging: 4
+      brandCode: '2021'
+      id: '1410051865232261122'
+      originPlace: 产地1
+      partBrandName: 品牌1
+      price: '100'
+    carPriceList: []
+    count: 1
+    createRow: false
+    ifHaveOem: true
+    image: l9XABYsI7gNhJEEksNH1t4U15AfH0urC8CO7+qi28c0=
+    imagePrePath: Bmw
+    inquiryRemark: ''
+    oem: '63127177730'
+    openCarAging: 4
+    originalAging: 4
+    originalPrice: '200'
+    originalPriceId: '1410051865223872514'
+    partId: '1410051860295565314'
+    partName: 前大灯总成（右）
+    referencePrice: 6510
+  - appendFlag: 0
+    brandPriceList:
+    - brandAging: 4
+      brandCode: '2020'
+      id: '1410051865249038337'
+      originPlace: 产地2
+      partBrandName: 品牌2
+      price: '200'
+    carPriceList: []
+    count: 1
+    createRow: false
+    ifHaveOem: true
+    image: l9XABYsI7gNhJEEksNH1t4U15AfH0urC8CO7+qi28c0=
+    imagePrePath: Bmw
+    inquiryRemark: ''
+    oem: '63127177729'
+    openCarAging: 4
+    originalAging: 4
+    originalPrice: '300'
+    originalPriceId: '1410051865240649729'
+    partId: '1410051860303953922'
+    partName: 前大灯总成（左）
+    referencePrice: 6510
+  quoteMainSaveParam:
+    id: '1410051860371062786'
+    remark: 报价备注报价备注报价备注报价备注报价备注
+    transportFee: '10'
+    transportType: 摩托车
+case014:
+  inquiryId: '1410051860278788097'
+  isPlaceOrder: false
+case015:
+  quoteDetailIdList: &id001
+  - '1410051865223872514'
+  - '1410051865232261122'
+  - '1410051865240649729'
+  - '1410051865249038337'
+case016:
+  idList: *id001
+  partList: &id002
+  - count: 1
+    id: '1410051865223872514'
+  - count: 1
+    id: '1410051865232261122'
+  - count: 1
+    id: '1410051865240649729'
+  - count: 1
+    id: '1410051865249038337'
+  type: 1
+case018:
+  id: '2435'
+  invoiceType: 2
+  params:
+  - orgId: '19480'
+    parts: *id002
+    remark: ''
+case019:
+  idList:
+  - '1410051883510910978'
+case022:
+  businessPayType: 10
+  ids:
+  - '1410051883510910978'
+  payMoney: '810.0'
+  payType: 5
+  returnUrl: https://www.daishupei.com/order/paySuccess
+case023:
+  carrierCompany: 袋鼠自动化物流
+  carrierNum: WL123456789
+  description: 发货备注
+  erpOrderNum: ERP123456789
+  logisticType: 10
+  orderId: '1410051883510910978'
+  sendProof: deliver/image/FoAnB_0GbbKPoSlEMUZlqpjqjG-z.jpg
+case026:
+  orderId: '1410051883510910978'
+  orderReturnDetailDTO:
+  - backMoney: 200.0
+    degreeVersion: 1
+    orderDetailId: '1410051883565436930'
+    returnCount: 1
+  - backMoney: 100.0
+    degreeVersion: 1
+    orderDetailId: '1410051883565436931'
+    returnCount: 1
+  - backMoney: 300.0
+    degreeVersion: 1
+    orderDetailId: '1410051883569631234'
+    returnCount: 1
+  - backMoney: 200.0
+    degreeVersion: 1
+    orderDetailId: '1410051883569631235'
+    returnCount: 1
+  orderReturnImageDTO:
+  - imageUrl: deliver/image/FoAnB_0GbbKPoSlEMUZlqpjqjG-z.jpg
+    returnType: 20
+  returnAmount: 800.0
+  returnDescription: 退货备注
+  returnReason: 不想买了
+case028:
+  checkRemark: 同意
+  checkStatus: 20
+  deliveryId: '2448'
+  id: '1410051892742574081'
+case029:
+  carrierCompany: 袋鼠自动化物流
+  carrierNum: wl123456789
+  description: 退货单发货备注
+  erpOrderNum: ERP123456789
+  logisticType: 20
+  orderId: '1410051892742574081'
+  sendProof: deliver/image/FoAnB_0GbbKPoSlEMUZlqpjqjG-z.jpg
+case031:
+  current: 1
+  orderNum: null
+  orderStatus: null
+  returnStatus: null
+  size: 10
+case033:
+  cityId: 330100
+  cityName: 杭州市
+  detailAddress: 祥园路139号浙大网新
+  districtId: 330105
+  districtName: 拱墅区
+  provinceId: 330000
+  provinceName: 浙江省
+  receiveEmpPhone: '11111111111'
+  receiveFixedPhone: ''
+  receiveName: 自动
+case035:
+  id: '2449'
+case036:
+  latitude: 30.33231
+  longitude: 120.07756
+  maker: 进口宝马
+  matchType: 1
+case037:
+  orgId: '2028601'
+case038:
+  accType: 2
+  canInquiry: true
+  canWithdraw: false
+  gender: 男
+  msgStatus: 0
+  name: 自动
+  orgSubordinateDTO: null
+  phone: '11112121212'
+  roleIdList:
+  - 17
+  status: 2
+  userType: null
+case039:
+  id: 28950
+case040:
+  amount: '100'
+  carBrandName: 进口宝马
+  costPrice: '100'
+  groupPrice: '100'
+  imgPath: stock/info/FoAnB_0GbbKPoSlEMUZlqpjqjG-z.jpg
+  insPrice: '100'
+  oem: '60698369741'
+  partBrandName: 测试
+  partsPrice: '100'
+  quality: 0
+  standardName: 大灯（右）

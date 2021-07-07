@@ -1,0 +1,133 @@
+{
+  "uid" : "13b1e43c339072a8",
+  "name" : "test_quote[data2]",
+  "fullName" : "tests.test_2_quote.TestQuote#test_quote",
+  "historyId" : "3d5e146e7878c99184e596da710dbd04",
+  "time" : {
+    "start" : 1624365290017,
+    "stop" : 1624365290163,
+    "duration" : 146
+  },
+  "status" : "broken",
+  "statusMessage" : "KeyError: 'data'",
+  "statusTrace" : "self = <tests.test_2_quote.TestQuote object at 0x7faec12e83a0>\nsupplierToken = 'Bearer c5a877124b63f1c5352a8fb995e1f4c69a1cb6e4'\ndata = {'caseID': 'case011', '描述': '获取报价单详情数据', '请求参数': 'case011', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/toQuotePage', ...}\n\n    @pytest.mark.parametrize(\n        \"data\",excelData\n    )\n    def test_quote(self,supplierToken,data):\n        caseId = data[OperationExcel.caseId]\n        url = data[OperationExcel.caseUrl]\n        method = data[OperationExcel.caseMethod]\n        jsonData = ExcelMappingYaml(filename=\"data.yaml\").get_mappingYaml(data[OperationExcel.caseParameter])\n        headers = {\"Authorization\": supplierToken}\n        expect = data[OperationExcel.caseExpect]\n    \n        if data[OperationExcel.caseId] == \"case011\":\n            res = My_request().GET(\n                url = url,\n                params = jsonData,\n                headers = headers\n            )\n            result = res.json()\n            # 配件1ID\n>           partId_01 = result[\"data\"][\"quoteDetailList\"][0][\"partId\"]\nE           KeyError: 'data'\n\ntests/test_2_quote.py:45: KeyError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1624365286534,
+      "stop" : 1624365286534,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1624365286826,
+      "stop" : 1624365286827,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1624365290016,
+      "stop" : 1624365290016,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1624365286534,
+      "stop" : 1624365286534,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1624365289474,
+      "stop" : 1624365289708,
+      "duration" : 234
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_2_quote"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestQuote"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "32613-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_2_quote"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case011', '描述': '获取报价单详情数据', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/toQuotePage', '请求参数': 'case011', '预期结果': '\"errCode\":0'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "13b1e43c339072a8.json",
+  "parameterValues" : [ "{'caseID': 'case011', '描述': '获取报价单详情数据', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/quote/toQuotePage', '请求参数': 'case011', '预期结果': '\"errCode\":0'}" ]
+}

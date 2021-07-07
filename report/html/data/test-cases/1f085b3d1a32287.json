@@ -1,0 +1,148 @@
+{
+  "uid" : "1f085b3d1a32287",
+  "name" : "test_order[data3]",
+  "fullName" : "tests.test_3_order.TestOrder#test_order",
+  "historyId" : "01333729b3a45dacd344f1d4da3cfe69",
+  "time" : {
+    "start" : 1624363910462,
+    "stop" : 1624363910639,
+    "duration" : 177
+  },
+  "status" : "broken",
+  "statusMessage" : "IndexError: list index out of range",
+  "statusTrace" : "self = <tests.test_3_order.TestOrder object at 0x7f9123da0e50>\ndata = {'caseID': 'case017', '描述': '获取收货地址', '操作方（修理厂/供应商）': 'repair_shopToken', '请求参数': '', ...}\nrepair_shopToken = 'Bearer 48b1cd2e4c03bdeb83eee5913288e9594a0da8c5'\nsupplierToken = 'Bearer 6d8311814d17023d362e3edc72a35068f7381467'\n\n    @pytest.mark.parametrize(\n        \"data\",excelData\n    )\n    def test_order(self,data,repair_shopToken,supplierToken):\n        caseId = data[OperationExcel.caseId]\n        url = data[OperationExcel.caseUrl]\n        method = data[OperationExcel.caseMethod]\n        # 判断取买家token还是卖家token\n        if data[OperationExcel.caseOperator] == \"repair_shopToken\":\n            headers = {\"Authorization\": repair_shopToken}\n        elif data[OperationExcel.caseOperator] == \"supplierToken\":\n            headers = {\"Authorization\": supplierToken}\n        jsonData = ExcelMappingYaml(filename=\"data.yaml\").get_mappingYaml(data[OperationExcel.caseParameter])\n        expect = data[OperationExcel.caseExpect]\n    \n        if caseId == \"case014\" and method == \"GET\":\n            # jsonData = ExcelMappingYaml(filename=\"data.yaml\").get_mappingYaml(data[OperationExcel.caseId])\n            res = My_request().GET(url=url, headers=headers, params=jsonData)\n            result = res.text\n    \n        if method == \"GET\":\n            res = My_request().GET(url=url,headers=headers,params=jsonData)\n            result = res.text\n    \n        elif method == \"POST\":\n            if caseId == \"case024\":\n                orderId = OperationYaml(filename=\"public.yaml\").readYamlDict()[\"orderId\"]\n                url = url + \"{0}\".format(orderId)    # 将case024拼接上orderId\n            res = My_request().POST(url=url,headers=headers,json=jsonData)\n            result = res.text\n            # 更新case018生成订单参数\n            if caseId == \"case017\":\n                modify_content = OperationYaml(filename=\"data.yaml\").readYamlDict()\n>               addressId = res.json()[\"data\"][\"orgDeliveryDTOS\"][0][\"id\"]\nE               IndexError: list index out of range\n\ntests/test_3_order.py:49: IndexError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1624363901015,
+      "stop" : 1624363901015,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1624363900546,
+      "stop" : 1624363900546,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1624363903607,
+      "stop" : 1624363904086,
+      "duration" : 479
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1624363900547,
+      "stop" : 1624363901015,
+      "duration" : 468
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1624363900546,
+      "stop" : 1624363900546,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1624363910462,
+      "stop" : 1624363910462,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_3_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "32101-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_3_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case017', '描述': '获取收货地址', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/ins/web/orgDeliveryInfo/selectByOrgDelivery', '请求参数': '', '预期结果': '\"errCode\":0'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1f085b3d1a32287.json",
+  "parameterValues" : [ "{'caseID': 'case017', '描述': '获取收货地址', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'POST', '请求地址': 'https://www.daishupei.com/api/ins/web/orgDeliveryInfo/selectByOrgDelivery', '请求参数': '', '预期结果': '\"errCode\":0'}" ]
+}

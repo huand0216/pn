@@ -1,0 +1,254 @@
+{
+  "uid" : "9065e364c0f332ff",
+  "name" : "test_order[data7]",
+  "fullName" : "tests.test_3_order.TestOrder#test_order",
+  "historyId" : "6f0a186571941e3708c901c98ad56f61",
+  "time" : {
+    "start" : 1625017541676,
+    "stop" : 1625017541793,
+    "duration" : 117
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "repair_shopToken",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017533281,
+      "duration" : 287
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "sensitive_url",
+    "time" : {
+      "start" : 1625017533281,
+      "stop" : 1625017533281,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "supplierToken",
+    "time" : {
+      "start" : 1625017536075,
+      "stop" : 1625017536380,
+      "duration" : 305
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1625017532994,
+      "stop" : 1625017532994,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_skip_sensitive",
+    "time" : {
+      "start" : 1625017541675,
+      "stop" : 1625017541675,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_3_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrder"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-huand.local"
+  }, {
+    "name" : "thread",
+    "value" : "4364-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_3_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'caseID': 'case021', '描述': '获取网银支付银行列表', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/pay/getBankTypeList', '请求参数': '', '预期结果': '银行'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2781a176c0f2dc89",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017416812,
+        "stop" : 1625017416897,
+        "duration" : 85
+      }
+    }, {
+      "uid" : "243c39037b1672ca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625017131977,
+        "stop" : 1625017132096,
+        "duration" : 119
+      }
+    }, {
+      "uid" : "cd4436340d03a584",
+      "status" : "passed",
+      "time" : {
+        "start" : 1625015953442,
+        "stop" : 1625015953552,
+        "duration" : 110
+      }
+    }, {
+      "uid" : "24a40c817834d508",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624420150536,
+        "stop" : 1624420150594,
+        "duration" : 58
+      }
+    }, {
+      "uid" : "a6ba8cc262cdc959",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624367031792,
+        "stop" : 1624367031885,
+        "duration" : 93
+      }
+    }, {
+      "uid" : "9bc05d64dc7c74a0",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '银行' in '{\"errCode\":100002,\"msg\":\"您的账户信息已失效，请重新登录！\"}'",
+      "time" : {
+        "start" : 1624366894581,
+        "stop" : 1624366894677,
+        "duration" : 96
+      }
+    }, {
+      "uid" : "c6879567deb22afe",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '银行' in '{\"errCode\":100002,\"msg\":\"您的账户信息已失效，请重新登录！\"}'",
+      "time" : {
+        "start" : 1624366825227,
+        "stop" : 1624366825300,
+        "duration" : 73
+      }
+    }, {
+      "uid" : "9f5a89a814f5d0cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366682285,
+        "stop" : 1624366682397,
+        "duration" : 112
+      }
+    }, {
+      "uid" : "930af7317d579d5a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624366336855,
+        "stop" : 1624366336955,
+        "duration" : 100
+      }
+    }, {
+      "uid" : "36fa961814cd2dd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624365293973,
+        "stop" : 1624365294096,
+        "duration" : 123
+      }
+    }, {
+      "uid" : "72606f7389a9930f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624363911269,
+        "stop" : 1624363911351,
+        "duration" : 82
+      }
+    }, {
+      "uid" : "3edb7d2f82341a21",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624261747542,
+        "stop" : 1624261747584,
+        "duration" : 42
+      }
+    }, {
+      "uid" : "d9657f8aaba61ec9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1624244417885,
+        "stop" : 1624244418026,
+        "duration" : 141
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9065e364c0f332ff.json",
+  "parameterValues" : [ "{'caseID': 'case021', '描述': '获取网银支付银行列表', '操作方（修理厂/供应商）': 'repair_shopToken', '请求方法': 'GET', '请求地址': 'https://www.daishupei.com/api/parts/web/pay/getBankTypeList', '请求参数': '', '预期结果': '银行'}" ]
+}
